@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Base Styles & Gold/Black Theme Variables */
         :root {
             --bg-color: #0d0d0d;
             --card-bg: #1a1a1a;
@@ -33,7 +32,6 @@
             line-height: 1.6;
         }
 
-        /* Gold Gradient Text Class */
         .gold-text {
             background: var(--gold-gradient);
             -webkit-background-clip: text;
@@ -55,7 +53,7 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: 1px;
         }
@@ -63,16 +61,17 @@
         nav ul {
             display: flex;
             list-style: none;
+            align-items: center;
         }
 
         nav ul li {
-            margin-left: 25px;
+            margin-left: 20px;
         }
 
         nav ul li a {
             color: var(--text-color);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: 0.3s;
         }
 
@@ -83,7 +82,7 @@
         .btn-gold {
             background: var(--gold-gradient);
             color: #000;
-            padding: 10px 22px;
+            padding: 8px 18px;
             border: none;
             border-radius: 25px;
             font-weight: 600;
@@ -115,7 +114,7 @@
         }
 
         .hero-content p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
             max-width: 700px;
             margin: 0 auto 30px auto;
@@ -128,7 +127,7 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .section-title h2 {
@@ -137,10 +136,71 @@
 
         .section-title p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
-        /* Services Section */
+        /* Interactive Menu / Option Selector Section */
+        .interactive-menu-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .menu-option-btn {
+            background: #111;
+            border: 1px solid #333;
+            color: var(--text-color);
+            padding: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .menu-option-btn:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+            background: #181818;
+        }
+
+        .menu-option-btn.active {
+            background: var(--gold-gradient);
+            color: #000;
+            border-color: transparent;
+        }
+
+        .selection-display-box {
+            background: #0d0d0d;
+            border: 1px dashed var(--gold-primary);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .selection-display-box p {
+            color: var(--gold-secondary);
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -159,7 +219,6 @@
         .service-card:hover {
             border-color: var(--gold-primary);
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
         }
 
         .service-card i {
@@ -178,40 +237,7 @@
             font-size: 0.88rem;
         }
 
-        /* Why Choose Us Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .feature-box {
-            display: flex;
-            align-items: flex-start;
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 3px solid var(--gold-primary);
-        }
-
-        .feature-box i {
-            font-size: 1.8rem;
-            color: var(--gold-primary);
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-
-        .feature-box h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .feature-box p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* Contact Form */
+        /* Contact Section */
         .contact-container {
             max-width: 600px;
             margin: 0 auto;
@@ -246,7 +272,6 @@
             border-color: var(--gold-primary);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
@@ -256,7 +281,6 @@
             font-size: 0.85rem;
         }
 
-        /* Responsive Mobile Layout */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -266,7 +290,7 @@
                 margin-top: 15px;
             }
             nav ul li {
-                margin: 0 10px;
+                margin: 0 8px;
             }
             .hero-content h1 {
                 font-size: 2rem;
@@ -277,13 +301,13 @@
 <body>
 
     <header>
-        <div class="logo gold-text">3i DESIGN EMPIRE</div>
+        <div class="logo gold-text"><i class="fa-solid fa-crown"></i> 3I DESIGN EMPIRE</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#menu-section">Interactive Menu</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn-gold" style="padding: 6px 15px; color:#000;">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -291,66 +315,59 @@
     <section id="home">
         <div class="hero-content">
             <h1>Empowering SMEs via <span class="gold-text">Smart Digitalization</span></h1>
-            <p>மலேசியாவில் உள்ள சிறிய மற்றும் நடுத்தர வணிகங்கள் டிஜிட்டல் முறைக்கு மாற உதவும் முதன்மை தொழில்நுட்ப ஆதரவு மையம்.</p>
-            <a href="#contact" class="btn-gold">Get Free Consultation</a>
+            <p>Providing professional web design, automation, and tech maintenance for growing businesses in Malaysia.</p>
+            <a href="#menu-section" class="btn-gold">Explore Options Menu</a>
+        </div>
+    </section>
+
+    <section id="menu-section">
+        <div class="section-title">
+            <h2>Interactive <span class="gold-text">Option Menu</span></h2>
+            <p>Select an option from the menu below to discover our core focus areas:</p>
+        </div>
+
+        <div class="interactive-menu-container">
+            <div class="menu-grid">
+                <button class="menu-option-btn" onclick="selectOption('Website Development', this)">
+                    <i class="fa-solid fa-laptop-code"></i> Website Design
+                </button>
+                <button class="menu-option-btn" onclick="selectOption('Business Automation', this)">
+                    <i class="fa-solid fa-gears"></i> Automation Tools
+                </button>
+                <button class="menu-option-btn" onclick="selectOption('Cloud & Hosting Support', this)">
+                    <i class="fa-solid fa-cloud"></i> Cloud Setup
+                </button>
+                <button class="menu-option-btn" onclick="selectOption('Maintenance & Bug Fixes', this)">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> System Maintenance
+                </button>
+            </div>
+
+            <div class="selection-display-box">
+                <p id="selection-output">👉 Please click an option above from the menu to view details.</p>
+            </div>
         </div>
     </section>
 
     <section id="services">
         <div class="section-title">
             <h2>Our <span class="gold-text">Services</span></h2>
-            <p>உங்கள் பிசினஸை அடுத்த கட்டத்திற்கு கொண்டு செல்ல நாங்கள் செய்யும் சேவைகள்</p>
+            <p>Tailored digital solutions built specifically for Small & Medium Enterprises</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <i class="fa-solid fa-laptop-code"></i>
-                <h3>Web Development</h3>
-                <p>தொழில்முறை மற்றும் நவீன 'Gold & Black' தீம் இணையதள வடிவமைப்பு.</p>
+                <i class="fa-solid fa-globe"></i>
+                <h3>Custom Websites</h3>
+                <p>Stunning, responsive Gold & Black themed websites designed to attract clients.</p>
             </div>
             <div class="service-card">
-                <i class="fa-solid fa-gears"></i>
-                <h3>Business Automation</h3>
-                <p>காகிதப் பணிகளைக் குறைத்து பிரத்யேக டிஜிட்டல் சாஃப்ட்வேர் சிஸ்டம் அமைத்தல்.</p>
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Digital Systems</h3>
+                <p>Transform paper records into streamlined digital logging and tracking tools.</p>
             </div>
             <div class="service-card">
-                <i class="fa-solid fa-cloud"></i>
-                <h3>Cloud Hosting</h3>
-                <p>குறைந்த அல்லது 0-காஸ்ட் க்ளவுட் ஹோஸ்டிங் மூலமாக பணத்தைச் சேமிக்கும் வழிகள்.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-bug"></i>
-                <h3>System Support</h3>
-                <p>ஏற்கனவே இயங்கும் சிஸ்டம்களுக்கான பராமரிப்பு மற்றும் பக்ஸ் (Bugs) சரிசெய்தல்.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-us">
-        <div class="section-title">
-            <h2>Why Choose <span class="gold-text">3i Design Empire</span></h2>
-            <p>எங்களை ஏன் நீங்கள் தேர்ந்தெடுக்க வேண்டும்?</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-box">
-                <i class="fa-solid fa-award"></i>
-                <div>
-                    <h4>17+ Years IT Experience</h4>
-                    <p>அனுபவம் வாய்ந்த தொழில்நுட்ப வல்லுநர்களின் நேரடி வழிகாட்டுதல்.</p>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fa-solid fa-hand-holding-dollar"></i>
-                <div>
-                    <h4>Affordable Pricing</h4>
-                    <p>SME வணிகங்களுக்கு ஏற்ற மிக நியாயமான கட்டண அமைப்புகள்.</p>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fa-solid fa-sliders"></i>
-                <div>
-                    <h4>Tailored Solutions</h4>
-                    <p>உங்கள் தேவைக்கேற்ப மட்டுமே உருவாக்கப்படும் பிரத்யேக சேவைகள்.</p>
-                </div>
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Reliable Support</h3>
+                <p>Ongoing maintenance and quick bug fixes to keep your business running smoothly.</p>
             </div>
         </div>
     </section>
@@ -358,30 +375,45 @@
     <section id="contact">
         <div class="section-title">
             <h2>Contact <span class="gold-text">Us</span></h2>
-            <p>இன்றே உங்கள் வணிகத்தை டிஜிட்டல் மயமாக்குங்கள்</p>
+            <p>Get in touch to digitize your business today</p>
         </div>
         <div class="contact-container">
-            <form onsubmit="alert('நன்றி! உங்கள் தகவல் பெறப்பட்டது.'); return false;">
+            <form onsubmit="alert('Thank you! Your message has been received.'); return false;">
                 <div class="form-group">
-                    <label>Name / பெயர்</label>
-                    <input type="text" placeholder="உங்கள் பெயர்" required>
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
-                    <label>Email / மின்னஞ்சல்</label>
-                    <input type="email" placeholder="உங்கள் ஈமெயில்" required>
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email address" required>
                 </div>
                 <div class="form-group">
-                    <label>Message / உங்கள் தேவை</label>
-                    <textarea rows="4" placeholder="உங்கள் பிசினஸ் தேவையை பதிவிடவும்..." required></textarea>
+                    <label>Your Requirement / Message</label>
+                    <textarea rows="4" placeholder="Tell us about your business needs..." required></textarea>
                 </div>
-                <button type="submit" class="btn-gold" style="width:100%;">Send Message</button>
+                <button type="submit" class="btn-gold" style="width:100%;">Submit Inquiry</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 3i Design Empire. All Rights Reserved. Empowering Malaysia SMEs.</p>
+        <p>&copy; 2026 3i Design Empire. All Rights Reserved. Empowering SMEs in Malaysia.</p>
     </footer>
+
+    <script>
+        function selectOption(optionName, buttonElement) {
+            // Remove 'active' class from all buttons
+            const buttons = document.querySelectorAll('.menu-option-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add 'active' class to the clicked button
+            buttonElement.classList.add('active');
+            
+            // Display the selected option in the output box
+            const outputBox = document.getElementById('selection-output');
+            outputBox.innerHTML = `✨ Selected Option: <strong>${optionName}</strong> - Perfect choice for accelerating your digital transformation!`;
+        }
+    </script>
 
 </body>
 </html>
