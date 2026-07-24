@@ -460,6 +460,18 @@
             justify-content: center;
             color: var(--gold-primary);
             border: 1px solid var(--border-color);
+            font-size: 1.2rem;
+        }
+
+        .contact-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--gold-primary);
         }
 
         .form-group {
@@ -625,7 +637,7 @@
             </ul>
 
             <div style="display: flex; gap: 15px; align-items: center;">
-                <a href="#contact" class="cta-btn" style="display: none; display: md-inline-flex;"><i class="fa-solid fa-paper-plane"></i> Get Quote</a>
+                <a href="https://wa.me/60149674813?text=Hi%203iDesignEmpire,%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20website/system." target="_blank" class="cta-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
                 <div class="mobile-toggle" id="mobileToggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -641,7 +653,7 @@
             <p>Empowering SMEs and growing businesses with high-performance web applications, reliable maintenance support, and custom digital automation solutions.</p>
             
             <div class="hero-btns">
-                <a href="#contact" class="cta-btn"><i class="fa-brands fa-whatsapp"></i> Instant Consultation</a>
+                <a href="https://wa.me/60149674813?text=Hi%203iDesignEmpire,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="cta-btn"><i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Chat</a>
                 <a href="#portfolio" class="btn-secondary"><i class="fa-solid fa-laptop-code"></i> Explore Our Work</a>
             </div>
 
@@ -835,13 +847,13 @@
             <div class="contact-box">
                 <div class="contact-info">
                     <h3>Let's Build Something <br><span class="gold-text">Extraordinary Together</span></h3>
-                    <p>Have a project in mind or need dedicated application support? Send us a message and we'll reply within 2 hours!</p>
+                    <p>Have a project in mind or need dedicated application support? Send us a message and we'll reply promptly!</p>
 
                     <div class="contact-method">
                         <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
                         <div>
                             <div style="font-size: 0.8rem; color: var(--text-muted);">WhatsApp Direct</div>
-                            <div style="font-weight: 600;">+60 12-XXX XXXX</div>
+                            <div><a href="https://wa.me/60149674813" target="_blank" class="contact-link">+60 14-967 4813</a></div>
                         </div>
                     </div>
 
@@ -849,7 +861,7 @@
                         <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                         <div>
                             <div style="font-size: 0.8rem; color: var(--text-muted);">Email Us</div>
-                            <div style="font-weight: 600;">support@3idesignempire.com</div>
+                            <div><a href="mailto:3iDesignEmipre@gmail.com" class="contact-link">3iDesignEmipre@gmail.com</a></div>
                         </div>
                     </div>
 
@@ -863,18 +875,18 @@
                 </div>
 
                 <div>
-                    <form onsubmit="event.preventDefault(); alert('நன்றி ஜி! உங்கள் மெசேஜ் பெறப்பட்டது. விரைவில் தொடர்பு கொள்கிறோம்.');">
+                    <form id="contactForm">
                         <div class="form-group">
                             <label>Your Name / உங்கள் பெயர்</label>
-                            <input type="text" class="form-control" placeholder="Enter your full name" required>
+                            <input type="text" id="custName" class="form-control" placeholder="Enter your full name" required>
                         </div>
                         <div class="form-group">
                             <label>Contact Number / வாட்ஸ்அப் எண்</label>
-                            <input type="tel" class="form-control" placeholder="+60 123456789" required>
+                            <input type="tel" id="custPhone" class="form-control" placeholder="+60 123456789" required>
                         </div>
                         <div class="form-group">
                             <label>Service Needed / தேவைப்படும் சேவை</label>
-                            <select class="form-control">
+                            <select id="custService" class="form-control">
                                 <option>Official Website Creation</option>
                                 <option>Custom Business Application</option>
                                 <option>Website Maintenance & Support</option>
@@ -883,9 +895,9 @@
                         </div>
                         <div class="form-group">
                             <label>Project Details / விவரங்கள்</label>
-                            <textarea class="form-control" placeholder="Tell us about your requirements..."></textarea>
+                            <textarea id="custMsg" class="form-control" placeholder="Tell us about your requirements..."></textarea>
                         </div>
-                        <button type="submit" class="cta-btn" style="width: 100%; justify-content: center;"><i class="fa-solid fa-paper-plane"></i> Send Inquiry</button>
+                        <button type="submit" class="cta-btn" style="width: 100%; justify-content: center;"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
                     </form>
                 </div>
             </div>
@@ -896,16 +908,15 @@
     <footer>
         <div class="container">
             <div class="footer-socials">
-                <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/60149674813" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:3iDesignEmipre@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
                 <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
             <p>&copy; 2026 <strong>3iDesignEmpire</strong>. All Rights Reserved. Built for International Excellence.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu & Smooth Scroll -->
+    <!-- JavaScript for Mobile Menu & WhatsApp Form Redirection -->
     <script>
         const mobileToggle = document.getElementById('mobileToggle');
         const navLinks = document.getElementById('navLinks');
@@ -929,6 +940,21 @@
                 mobileToggle.querySelector('i').classList.remove('fa-xmark');
                 mobileToggle.querySelector('i').classList.add('fa-bars');
             });
+        });
+
+        // WhatsApp Form Integration Script
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const service = document.getElementById('custService').value;
+            const msg = document.getElementById('custMsg').value;
+
+            const fullText = `*New Inquiry from Website*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service Required:* ${encodeURIComponent(service)}%0A*Details:* ${encodeURIComponent(msg)}`;
+            
+            const waUrl = `https://wa.me/60149674813?text=${fullText}`;
+            window.open(waUrl, '_blank');
         });
     </script>
 </body>
