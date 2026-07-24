@@ -83,29 +83,15 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
             text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            background: var(--gold-gradient);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
-            font-weight: 900;
-            font-size: 1.2rem;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
         }
 
         .logo-text {
             font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             letter-spacing: 1px;
             color: #fff;
+            font-weight: 700;
         }
 
         .nav-links {
@@ -313,8 +299,10 @@
         /* Portfolio / Products Section */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .portfolio-card {
@@ -331,7 +319,7 @@
         }
 
         .portfolio-preview {
-            height: 180px;
+            height: 200px;
             background: #1a1a24;
             display: flex;
             align-items: center;
@@ -341,9 +329,9 @@
         }
 
         .portfolio-preview i {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: var(--gold-primary);
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         .portfolio-tag {
@@ -363,13 +351,13 @@
         }
 
         .portfolio-body h3 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             margin-bottom: 10px;
         }
 
         .portfolio-body p {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             margin-bottom: 15px;
         }
 
@@ -383,7 +371,7 @@
         .feature-badge {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 3px 10px;
+            padding: 4px 12px;
             border-radius: 6px;
             font-size: 0.78rem;
             color: var(--text-muted);
@@ -560,6 +548,10 @@
                 display: block;
             }
 
+            .nav-btn-desktop {
+                display: none !important;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 75px;
@@ -624,7 +616,6 @@
     <header>
         <div class="container navbar">
             <a href="#" class="logo">
-                <div class="logo-icon">3i</div>
                 <div class="logo-text">3iDesign Empire</div>
             </a>
             
@@ -637,7 +628,7 @@
             </ul>
 
             <div style="display: flex; gap: 15px; align-items: center;">
-                <a href="https://wa.me/60149674813?text=Hi%203iDesignEmpire,%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20website/system." target="_blank" class="cta-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+                <a href="https://wa.me/60149674813?text=Hi%203iDesignEmpire,%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20website/system." target="_blank" class="cta-btn nav-btn-desktop"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
                 <div class="mobile-toggle" id="mobileToggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -743,7 +734,7 @@
             </div>
 
             <div class="portfolio-grid">
-                <!-- Project 1 -->
+                <!-- Project 1: PT Log -->
                 <div class="portfolio-card">
                     <div class="portfolio-preview">
                         <i class="fa-solid fa-dumbbell"></i>
@@ -760,7 +751,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2: Play School -->
                 <div class="portfolio-card">
                     <div class="portfolio-preview">
                         <i class="fa-solid fa-school"></i>
@@ -773,23 +764,6 @@
                             <span class="feature-badge">Interactive UI</span>
                             <span class="feature-badge">SEO Friendly</span>
                             <span class="feature-badge">Fast Loading</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="portfolio-card">
-                    <div class="portfolio-preview">
-                        <i class="fa-solid fa-building"></i>
-                        <span class="portfolio-tag">Corporate Branding</span>
-                    </div>
-                    <div class="portfolio-body">
-                        <h3>3iDesignEmpire Official Website</h3>
-                        <p>International standard corporate portal featuring dark luxury theme, responsive grid, free cloud deployment, and WhatsApp lead capture.</p>
-                        <div class="portfolio-features">
-                            <span class="feature-badge">Luxury Dark Theme</span>
-                            <span class="feature-badge">Vercel/GitHub Ready</span>
-                            <span class="feature-badge">Instant Load</span>
                         </div>
                     </div>
                 </div>
@@ -877,15 +851,15 @@
                 <div>
                     <form id="contactForm">
                         <div class="form-group">
-                            <label>Your Name / உங்கள் பெயர்</label>
+                            <label>Your Name</label>
                             <input type="text" id="custName" class="form-control" placeholder="Enter your full name" required>
                         </div>
                         <div class="form-group">
-                            <label>Contact Number / வாட்ஸ்அப் எண்</label>
+                            <label>Contact Number</label>
                             <input type="tel" id="custPhone" class="form-control" placeholder="+60 123456789" required>
                         </div>
                         <div class="form-group">
-                            <label>Service Needed / தேவைப்படும் சேவை</label>
+                            <label>Service Needed</label>
                             <select id="custService" class="form-control">
                                 <option>Official Website Creation</option>
                                 <option>Custom Business Application</option>
@@ -894,7 +868,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Project Details / விவரங்கள்</label>
+                            <label>Project Details</label>
                             <textarea id="custMsg" class="form-control" placeholder="Tell us about your requirements..."></textarea>
                         </div>
                         <button type="submit" class="cta-btn" style="width: 100%; justify-content: center;"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
