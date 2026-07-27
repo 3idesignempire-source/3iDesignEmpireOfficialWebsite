@@ -1,606 +1,948 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3i Design Empire - Malaysia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3i Design Empire - Malaysia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-        body {
-            background-color: #030303;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
+        body {
+            background-color: #030303;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: radial-gradient(circle at center, #111111 0%, #030303 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 1s ease, visibility 1s ease;
-            padding: 15px;
-        }
+        /* Splash Screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(circle at center, #111111 0%, #030303 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 1s ease, visibility 1s ease;
+            padding: 15px;
+        }
 
-        .splash-content-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-            margin: auto;
-        }
+        .splash-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            max-width: 650px;
+            width: 100%;
+            margin: auto;
+        }
 
-        .crown-logo-graphic {
-            width: 80px;
-            height: 55px;
-            margin-bottom: 10px;
-            opacity: 0;
-            animation: fadeInCrown 1.2s ease 0.2s forwards, floatCrown 3s ease-in-out infinite alternate;
-            filter: drop-shadow(0 12px 20px rgba(191, 149, 63, 0.6));
-        }
+        .crown-logo-graphic {
+            width: 90px;
+            height: 60px;
+            margin-bottom: 12px;
+            opacity: 0;
+            animation: fadeInCrown 1.2s ease 0.2s forwards, floatCrown 3s ease-in-out infinite alternate;
+            filter: drop-shadow(0 15px 25px rgba(191, 149, 63, 0.6));
+        }
 
-        @keyframes fadeInCrown {
-            from { opacity: 0; transform: translateY(-20px) scale(0.3); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
+        @keyframes fadeInCrown {
+            from { opacity: 0; transform: translateY(-20px) scale(0.3); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
 
-        @keyframes floatCrown {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-6px); }
-        }
+        @keyframes floatCrown {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-6px); }
+        }
 
-        .logo-container {
-            perspective: 1200px;
-            margin-bottom: 12px;
-            width: 100%;
-        }
+        .logo-container {
+            perspective: 1200px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
 
-        .logo-3d {
-            font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: perfectZoomIn 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards, floatGold 3.5s ease-in-out infinite alternate;
-            filter: drop-shadow(0 15px 25px rgba(191, 149, 63, 0.4));
-            letter-spacing: 2px;
-            text-align: center;
-            opacity: 0;
-            transform: scale(0.2) translateZ(-100px);
-            line-height: 1.2;
-        }
+        .logo-3d {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: perfectZoomIn 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards, floatGold 3.5s ease-in-out infinite alternate;
+            filter: drop-shadow(0 20px 30px rgba(191, 149, 63, 0.4));
+            letter-spacing: 2px;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.2) translateZ(-100px);
+            line-height: 1.2;
+        }
 
-        @keyframes perfectZoomIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.2) translateZ(-100px) rotateX(45deg);
-                filter: drop-shadow(0 0 0 rgba(191, 149, 63, 0));
-            }
-            60% {
-                opacity: 1;
-                transform: scale(1.06) translateZ(20px) rotateX(-5deg);
-                filter: drop-shadow(0 20px 35px rgba(191, 149, 63, 0.6));
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateZ(0) rotateX(0deg);
-                filter: drop-shadow(0 15px 25px rgba(191, 149, 63, 0.4));
-            }
-        }
+        @keyframes perfectZoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.2) translateZ(-100px) rotateX(45deg);
+                filter: drop-shadow(0 0 0 rgba(191, 149, 63, 0));
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.06) translateZ(20px) rotateX(-5deg);
+                filter: drop-shadow(0 25px 40px rgba(191, 149, 63, 0.6));
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateZ(0) rotateX(0deg);
+                filter: drop-shadow(0 15px 25px rgba(191, 149, 63, 0.4));
+            }
+        }
 
-        @keyframes floatGold {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-6px); }
-        }
+        @keyframes floatGold {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-8px); }
+        }
 
-        .splash-subtitle {
-            font-size: 1.05rem;
-            color: #d4d4d4;
-            margin-bottom: 25px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            font-weight: 500;
-            opacity: 0;
-            animation: fadeInText 1.2s ease 1s forwards;
-            text-align: center;
-            background: linear-gradient(90deg, #e5e5e5, #bf953f, #e5e5e5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.4;
-        }
+        .splash-subtitle {
+            font-size: 1.05rem;
+            color: #d4d4d4;
+            margin-bottom: 30px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeInText 1.2s ease 1s forwards;
+            text-align: center;
+            background: linear-gradient(90deg, #e5e5e5, #bf953f, #e5e5e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.5;
+        }
 
-        @keyframes fadeInText {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-        .lang-selector-box {
-            background: rgba(18, 18, 18, 0.95);
-            border: 1px solid rgba(191, 149, 63, 0.4);
-            backdrop-filter: blur(16px);
-            padding: 25px 30px;
-            border-radius: 18px;
-            text-align: center;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(191, 149, 63, 0.15);
-            width: 100%;
-            opacity: 0;
-            animation: slideUpFade 1s ease 1.4s forwards;
-        }
+        .lang-selector-box {
+            background: rgba(18, 18, 18, 0.95);
+            border: 1px solid rgba(191, 149, 63, 0.4);
+            backdrop-filter: blur(16px);
+            padding: 25px 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(191, 149, 63, 0.15);
+            width: 100%;
+            opacity: 0;
+            animation: slideUpFade 1s ease 1.4s forwards;
+        }
 
-        @keyframes slideUpFade {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+        @keyframes slideUpFade {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
 
-        .lang-selector-box h3 {
-            font-size: 1.05rem;
-            margin-bottom: 15px;
-            color: #f1f1f1;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
+        .lang-selector-box h3 {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: #f1f1f1;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
 
-        .dropdown-wrapper {
-            position: relative;
-            width: 100%;
-        }
+        .lang-buttons-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
 
-        .lang-dropdown {
-            width: 100%;
-            background: #080808;
-            color: #fcf6ba;
-            border: 2px solid #bf953f;
-            padding: 12px 18px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            outline: none;
-            transition: all 0.3s ease;
-            appearance: none;
-            text-align: center;
-        }
+        .lang-btn {
+            background: #080808;
+            color: #fcf6ba;
+            border: 2px solid #bf953f;
+            padding: 12px 15px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
 
-        .lang-dropdown option {
-            background: #121212;
-            color: #ffffff;
-            text-align: left;
-        }
+        .lang-btn:hover {
+            background: #bf953f;
+            color: #050505;
+            box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);
+            transform: translateY(-2px);
+        }
 
-        .lang-dropdown:hover, .lang-dropdown:focus {
-            background: #141414;
-            box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);
-        }
+        /* Main Single Page Website */
+        #main-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
 
-        .dropdown-wrapper::after {
-            content: '\f107';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #bf953f;
-            pointer-events: none;
-        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(191, 149, 63, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            z-index: 1000;
+        }
 
-        #main-content {
-            display: none;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
+        .nav-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(5, 5, 5, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(191, 149, 63, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            z-index: 1000;
-        }
+        .nav-crown-svg {
+            width: 28px;
+            height: 20px;
+        }
 
-        .nav-logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+        .nav-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #bf953f, #fcf6ba);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.8px;
+            white-space: nowrap;
+        }
 
-        .nav-crown-svg {
-            width: 30px;
-            height: 22px;
-        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
 
-        .nav-logo {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #bf953f, #fcf6ba);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-        }
+        .nav-links a {
+            text-decoration: none;
+            color: #cccccc;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
+        .nav-links a:hover {
+            color: #bf953f;
+        }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #cccccc;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+        .home-btn-nav {
+            background: rgba(191, 149, 63, 0.15);
+            border: 1px solid rgba(191, 149, 63, 0.5);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #fcf6ba;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-        .nav-links a:hover {
-            color: #bf953f;
-        }
+        .home-btn-nav:hover {
+            background: #bf953f;
+            color: #050505;
+            box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);
+        }
 
-        .lang-indicator {
-            background: rgba(191, 149, 63, 0.15);
-            border: 1px solid rgba(191, 149, 63, 0.4);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: #fcf6ba;
-            font-weight: 600;
-        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #141414 0%, #030303 75%);
+            position: relative;
+        }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: radial-gradient(circle at center, #141414 0%, #030303 75%);
-            position: relative;
-        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            max-width: 900px;
+            line-height: 1.2;
+            color: #ffffff;
+        }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            max-width: 900px;
-            line-height: 1.2;
-            color: #ffffff;
-        }
+        .hero h1 span {
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        .hero h1 span {
-            background: linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #a3a3a3;
+            max-width: 700px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
 
-        .hero p {
-            font-size: 1.15rem;
-            color: #a3a3a3;
-            max-width: 700px;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
+        .cta-btn {
+            background: linear-gradient(135deg, #bf953f, #aa771c);
+            color: #050505;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 10px 25px rgba(191, 149, 63, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-        .cta-btn {
-            background: linear-gradient(135deg, #bf953f, #aa771c);
-            color: #050505;
-            padding: 15px 35px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            box-shadow: 0 10px 25px rgba(191, 149, 63, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(191, 149, 63, 0.5);
+            background: linear-gradient(135deg, #fcf6ba, #bf953f);
+        }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(191, 149, 63, 0.5);
-            background: linear-gradient(135deg, #fcf6ba, #bf953f);
-        }
+        /* Sections */
+        .section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        .services-section {
-            padding: 100px 50px;
-            background: #080808;
-            border-top: 1px solid rgba(191, 149, 63, 0.1);
-        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 35px;
+            color: #ffffff;
+        }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 60px;
-            color: #ffffff;
-        }
+        .section-title span {
+            background: linear-gradient(135deg, #bf953f, #fcf6ba);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        .section-title span {
-            background: linear-gradient(135deg, #bf953f, #fcf6ba);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        /* About Us */
+        .about-section {
+            background: #060606;
+            border-top: 1px solid rgba(191, 149, 63, 0.1);
+        }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .about-card {
+            background: rgba(15, 15, 15, 0.85);
+            border: 1px solid rgba(191, 149, 63, 0.25);
+            padding: 45px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            text-align: center;
+            max-width: 950px;
+            margin: 0 auto;
+        }
 
-        .service-card {
-            background: rgba(15, 15, 15, 0.85);
-            border: 1px solid rgba(191, 149, 63, 0.2);
-            padding: 40px 30px;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-            text-align: left;
-        }
+        .about-card p {
+            color: #cccccc;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: #bf953f;
-            box-shadow: 0 10px 25px rgba(191, 149, 63, 0.15);
-        }
+        /* Services */
+        .services-section {
+            background: #030303;
+            border-top: 1px solid rgba(191, 149, 63, 0.1);
+        }
 
-        .service-card i {
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, #bf953f, #fcf6ba);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
+        .service-card {
+            background: rgba(15, 15, 15, 0.85);
+            border: 1px solid rgba(191, 149, 63, 0.2);
+            padding: 40px 30px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
 
-        .service-card p {
-            color: #a3a3a3;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #bf953f;
+            box-shadow: 0 10px 25px rgba(191, 149, 63, 0.15);
+        }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #020202;
-            color: #737373;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(191, 149, 63, 0.1);
-        }
+        .service-card i {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #bf953f, #fcf6ba);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.4rem; }
-            header { padding: 15px 20px; }
-            .nav-links { display: none; }
-            .logo-3d { font-size: 2.5rem; }
-            .splash-content-wrapper { padding: 0 10px; }
-        }
-    </style>
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            color: #a3a3a3;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Portfolio */
+        .portfolio-section {
+            background: #060606;
+            border-top: 1px solid rgba(191, 149, 63, 0.1);
+        }
+
+        .portfolio-card {
+            background: rgba(15, 15, 15, 0.9);
+            border: 1px solid rgba(191, 149, 63, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 950px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.8rem;
+            color: #fcf6ba;
+            margin-bottom: 15px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .portfolio-card p {
+            color: #b0b0b0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot-box {
+            background: #111;
+            border: 1px solid rgba(191, 149, 63, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .screenshot-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        .screenshot-box span {
+            font-size: 0.85rem;
+            color: #bf953f;
+            font-weight: 600;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: #030303;
+            border-top: 1px solid rgba(191, 149, 63, 0.1);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(15, 15, 15, 0.85);
+            border: 1px solid rgba(191, 149, 63, 0.25);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info h3 {
+            font-size: 1.6rem;
+            color: #fcf6ba;
+            margin-bottom: 25px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            color: #bf953f;
+            margin-top: 4px;
+        }
+
+        .contact-item div h4 {
+            font-size: 1rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .contact-item div p, .contact-item div a {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item div a:hover {
+            color: #bf953f;
+        }
+
+        .whatsapp-btn-direct {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25d366;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn-direct:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        .map-box {
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(191, 149, 63, 0.3);
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(80%) invert(90%) contrast(90%);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020202;
+            color: #737373;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(191, 149, 63, 0.1);
+        }
+
+        @media (max-width: 850px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+            .logo-3d { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.4rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <div id="splash-screen">
-        <div class="splash-content-wrapper">
-            <svg class="crown-logo-graphic" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#bf953f" />
-                        <stop offset="25%" stop-color="#fcf6ba" />
-                        <stop offset="50%" stop-color="#b38728" />
-                        <stop offset="75%" stop-color="#fbf5b7" />
-                        <stop offset="100%" stop-color="#aa771c" />
-                    </linearGradient>
-                </defs>
-                <path d="M10 55 L90 55 L95 25 L70 42 L50 15 L30 42 L5 25 Z" fill="url(#goldGrad)" stroke="#fcf6ba" stroke-width="2" stroke-linejoin="round"/>
-                <circle cx="10" cy="22" r="4" fill="url(#goldGrad)" />
-                <circle cx="50" cy="12" r="5" fill="url(#goldGrad)" />
-                <circle cx="90" cy="22" r="4" fill="url(#goldGrad)" />
-                <rect x="10" y="58" width="80" height="7" rx="3" fill="url(#goldGrad)" />
-            </svg>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-content-wrapper">
+            <svg class="crown-logo-graphic" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#bf953f" />
+                        <stop offset="25%" stop-color="#fcf6ba" />
+                        <stop offset="50%" stop-color="#b38728" />
+                        <stop offset="75%" stop-color="#fbf5b7" />
+                        <stop offset="100%" stop-color="#aa771c" />
+                    </linearGradient>
+                </defs>
+                <path d="M10 55 L90 55 L95 25 L70 42 L50 15 L30 42 L5 25 Z" fill="url(#goldGrad)" stroke="#fcf6ba" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="10" cy="22" r="4" fill="url(#goldGrad)" />
+                <circle cx="50" cy="12" r="5" fill="url(#goldGrad)" />
+                <circle cx="90" cy="22" r="4" fill="url(#goldGrad)" />
+                <rect x="10" y="58" width="80" height="7" rx="3" fill="url(#goldGrad)" />
+            </svg>
 
-            <div class="logo-container">
-                <div class="logo-3d">3i DESIGN EMPIRE</div>
-            </div>
-            <div class="splash-subtitle">Empowering Malaysia SMEs & Professionals with Complete Digitalization Solutions</div>
-            
-            <div class="lang-selector-box">
-                <h3>Please Select Your Preferred Language</h3>
-                <div class="dropdown-wrapper">
-                    <select class="lang-dropdown" id="language-select" onchange="handleLanguageChange(this.value)">
-                        <option value="" disabled selected>-- Choose Language --</option>
-                        <option value="en">English</option>
-                        <option value="ms">Bahasa Melayu</option>
-                        <option value="ta">தமிழ் (Tamil)</option>
-                        <option value="zh">中文 (Mandarin)</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="logo-container">
+                <div class="logo-3d">3i DESIGN EMPIRE</div>
+            </div>
+            <div class="splash-subtitle" id="splash-subtitle-text">EMPOWERING Small Medium Enterprises (SME) WITH DIGITALIZATION & AUTOMATION SOLUTIONS</div>
+            
+            <div class="lang-selector-box">
+                <h3 id="lang-box-title">Please Select Your Preferred Language</h3>
+                <div class="lang-buttons-container">
+                    <button class="lang-btn" onclick="enterSite('en')">English</button>
+                    <button class="lang-btn" onclick="enterSite('ms')">Bahasa Melayu</button>
+                    <button class="lang-btn" onclick="enterSite('ta')">தமிழ்</button>
+                    <button class="lang-btn" onclick="enterSite('zh')">中文</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div id="main-content">
-        <header>
-            <div class="nav-logo-area">
-                <svg class="nav-crown-svg" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 55 L90 55 L95 25 L70 42 L50 15 L30 42 L5 25 Z" fill="url(#goldGrad)" stroke="#fcf6ba" stroke-width="2" stroke-linejoin="round"/>
-                    <circle cx="10" cy="22" r="4" fill="url(#goldGrad)" />
-                    <circle cx="50" cy="12" r="5" fill="url(#goldGrad)" />
-                    <circle cx="90" cy="22" r="4" fill="url(#goldGrad)" />
-                    <rect x="10" y="58" width="80" height="7" rx="3" fill="url(#goldGrad)" />
-                </svg>
-                <div class="nav-logo">3i DESIGN EMPIRE</div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#hero" id="nav-home">Home</a></li>
-                <li><a href="#services" id="nav-services">Services</a></li>
-                <li><a href="#contact" id="nav-contact">Contact</a></li>
-            </ul>
-            <div class="lang-indicator" id="current-lang-badge">ENGLISH</div>
-        </header>
+    <!-- Main Website Content -->
+    <div id="main-content">
+        <header>
+            <div class="nav-logo-area">
+                <svg class="nav-crown-svg" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 55 L90 55 L95 25 L70 42 L50 15 L30 42 L5 25 Z" fill="url(#goldGrad)" stroke="#fcf6ba" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="10" cy="22" r="4" fill="url(#goldGrad)" />
+                    <circle cx="50" cy="12" r="5" fill="url(#goldGrad)" />
+                    <circle cx="90" cy="22" r="4" fill="url(#goldGrad)" />
+                    <rect x="10" y="58" width="80" height="7" rx="3" fill="url(#goldGrad)" />
+                </svg>
+                <div class="nav-logo">3i DESIGN EMPIRE</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" id="nav-about">About Us</a></li>
+                <li><a href="#services" id="nav-services">Services</a></li>
+                <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
+                <li><a href="#contact" id="nav-contact">Contact Us</a></li>
+                <li><button class="home-btn-nav" onclick="returnToSplash()"><i class="fas fa-home"></i> Home</button></li>
+            </ul>
+        </header>
 
-        <section class="hero" id="hero">
-            <h1 id="hero-title">Empowering SMEs & Individuals with <span>Digital Excellence</span> in Malaysia</h1>
-            <p id="hero-desc">We transform traditional SME operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
-            <a href="#services" class="cta-btn" id="hero-btn">Explore Our Services</a>
-        </section>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1 id="hero-title">EMPOWERING Small Medium Enterprises (SME) WITH <span>DIGITALIZATION & AUTOMATION</span></h1>
+            <p id="hero-desc">We transform traditional Small Medium Enterprises (SME) operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
+            <a href="#services" class="cta-btn" id="hero-btn">Explore Our Services</a>
+        </section>
 
-        <section class="services-section" id="services">
-            <h2 class="section-title" id="services-heading">Our Core <span>Services</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3 id="serv-1-title">Custom Web & App Development</h3>
-                    <p id="serv-1-desc">Modern, responsive, and high-speed web platforms and custom business systems built for SMEs in Malaysia.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3 id="serv-2-title">Business Digitalization</h3>
-                    <p id="serv-2-desc">Convert paper-based logs, records, and manual workflows into sleek, automated digital cloud workflows.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tools"></i>
-                    <h3 id="serv-3-title">IT Support & Maintenance</h3>
-                    <p id="serv-3-desc">Reliable part-time application support, bug fixing, and continuous system maintenance for smooth operations.</p>
-                </div>
-            </div>
-        </section>
+        <!-- About Us Section -->
+        <section class="section about-section" id="about">
+            <h2 class="section-title" id="about-heading">About <span>Us</span></h2>
+            <div class="about-card">
+                <p id="about-text-1">3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local Small Medium Enterprises (SME) and businesses.</p>
+                <p id="about-text-2">We believe every local enterprise deserves top-tier digital systems, automated workflows, and high-performance custom applications to thrive in today's competitive landscape. Our commitment is to empower your business growth through cutting-edge technology delivered with precision and excellence.</p>
+            </div>
+        </section>
 
-        <footer id="contact">
-            <p id="footer-text">&copy; 2026 3i Design Empire. All Rights Reserved. Serving Malaysia SMEs & Professionals.</p>
-        </footer>
-    </div>
+        <!-- Services Section -->
+        <section class="section services-section" id="services">
+            <h2 class="section-title" id="services-heading">Our Core <span>Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3 id="serv-1-title">Custom Web & Mobile Application Development</h3>
+                    <p id="serv-1-desc">Modern, responsive, and high-speed web platforms and custom business systems built for Small Medium Enterprises (SME).</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3 id="serv-2-title">Business Digitalization & Automation</h3>
+                    <p id="serv-2-desc">Convert manual workflows, paper records, and repetitive tasks into sleek, automated cloud workflows.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3 id="serv-3-title">IT Support & Maintenance</h3>
+                    <p id="serv-3-desc">Reliable part-time application support, bug fixing, and continuous system maintenance for smooth operations.</p>
+                </div>
+            </div>
+        </section>
 
-    <script>
-        const translations = {
-            en: {
-                badge: "ENGLISH",
-                navHome: "Home",
-                navServices: "Services",
-                navContact: "Contact",
-                heroTitle: "Empowering SMEs & Individuals with <span>Digital Excellence</span> in Malaysia",
-                heroDesc: "We transform traditional SME operations into smart, automated, and high-performance digital systems tailored for your business growth.",
-                heroBtn: "Explore Our Services",
-                servicesHeading: "Our Core <span>Services</span>",
-                serv1Title: "Custom Web & App Development",
-                serv1Desc: "Modern, responsive, and high-speed web platforms and custom business systems built for SMEs in Malaysia.",
-                serv2Title: "Business Digitalization",
-                serv2Desc: "Convert paper-based logs, records, and manual workflows into sleek, automated digital cloud workflows.",
-                serv3Title: "IT Support & Maintenance",
-                serv3Desc: "Reliable part-time application support, bug fixing, and continuous system maintenance for smooth operations.",
-                footer: "© 2026 3i Design Empire. All Rights Reserved. Serving Malaysia SMEs & Professionals."
-            },
-            ms: {
-                badge: "MELAYU",
-                navHome: "Utama",
-                navServices: "Perkhidmatan",
-                navContact: "Hubungi",
-                heroTitle: "Memperkasakan PKS & Individu dengan <span>Kecemerlangan Digital</span> di Malaysia",
-                heroDesc: "Kami mengubah operasi tradisional PKS kepada sistem digital pintar, automatik dan berprestasi tinggi untuk perniagaan anda.",
-                heroBtn: "Teroka Perkhidmatan Kami",
-                servicesHeading: "Perkhidmatan <span>Utama</span> Kami",
-                serv1Title: "Pembangunan Web & Aplikasi",
-                serv1Desc: "Platform web moden, responsif dan pantas serta sistem perniagaan tersuai untuk PKS di Malaysia.",
-                serv2Title: "Pendigitalan Perniagaan",
-                serv2Desc: "Menukar log berasaskan kertas dan aliran kerja manual kepada sistem digital awan yang automatik.",
-                serv3Title: "Sokongan & Penyelenggaraan IT",
-                serv3Desc: "Sokongan aplikasi sambilan yang boleh dipercayai, pembetulan pepijat, dan penyelenggaraan sistem.",
-                footer: "© 2026 3i Design Empire. Hak Cipta Terpelihara. Melayani PKS & Profesional Malaysia."
-            },
-            ta: {
-                badge: "TAMIL",
-                navHome: "முகப்பு",
-                navServices: "சேவைகள்",
-                navContact: "தொடர்பு",
-                heroTitle: "மலேசியாவில் உள்ள SME-களுக்கு <span>டிஜிட்டல் சிறப்புடன்</span> கூடிய நவீன தொழில்நுட்பம்",
-                heroDesc: "பாரம்பரிய SME முறைகளை மாற்றி, உங்கள் வியாபார வளர்ச்சிக்காக துரிதமான, ஆட்டோமேட்டட் டிஜிட்டல் சிஸ்டங்களை உருவாக்குகிறோம்.",
-                heroBtn: "எங்கள் சேவைகளைக் காண்க",
-                servicesHeading: "எங்கள் முக்கிய <span>சேவைகள்</span>",
-                serv1Title: "வெப்சைட் & ஆப் டெவலப்மென்ட்",
-                serv1Desc: "மலேசியாவில் உள்ள SME-களுக்குத் தேவையான அதிநவீன, துரிதமான வெப்சைட்டுகள் மற்றும் கஸ்டம் பிசினஸ் சிஸ்டம்ஸ்.",
-                serv2Title: "பிசினஸ் டிஜிட்டலைசேஷன்",
-                serv2Desc: "பேப்பர் ஒர்க்குகள் மற்றும் மேனுவல் லாக்ஸ்களை நேர்த்தியான, பாதுகாப்பான டிஜிட்டல் கிளவுட் ஒர்க்ஃப்ளோவாக மாற்றுதல்.",
-                serv3Title: "ஐடி சப்போர்ட் & மெயின்டனன்ஸ்",
-                serv3Desc: "நம்பகமான பார்ட்-டைம் அப்ளிகேஷன் சப்போர்ட், பக் ஃபிக்சிங் மற்றும் சிஸ்டம் மெயின்டனன்ஸ் சேவைகள்.",
-                footer: "© 2026 3i Design Empire. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. மலேசியா SME-களுக்கு சேவை."
-            },
-            zh: {
-                badge: "中文",
-                navHome: "首页",
-                navServices: "服务",
-                navContact: "联系我们",
-                heroTitle: "以<span>卓越数字化</span>赋能马来西亚中小企业与个人",
-                heroDesc: "我们将传统中小企业运营转化为专为您的业务增长量身定制的智能、自动化和高性能数字系统。",
-                heroBtn: "探索我们的服务",
-                servicesHeading: "我们的核心<span>服务</span>",
-                serv1Title: "定制网页与应用开发",
-                serv1Desc: "为马来西亚中小企业构建现代、响应式、高速的网页平台和定制化业务系统。",
-                serv2Title: "业务数字化转型",
-                serv2Desc: "将纸质日志和手动工作流程转换为流畅、自动化的数字云端工作流。",
-                serv3Title: "IT 支持与维护",
-                serv3Desc: "可靠的兼职应用支持、漏洞修复和持续的系统维护，确保顺畅运行。",
-                footer: "© 2026 3i Design Empire. 版权所有。服务于马来西亚中小企业与专业人士。"
-            }
-        };
+        <!-- Portfolio Section -->
+        <section class="section portfolio-section" id="portfolio">
+            <h2 class="section-title" id="portfolio-heading">Our <span>Projects</span></h2>
+            <div class="portfolio-card">
+                <h3 id="proj-title">Personal Trainer Log System</h3>
+                <p id="proj-desc">A comprehensive mobile-friendly digital workout tracking and gym management system designed for personal trainers to effortlessly manage trainees, create master workout programs, and track real-time fitness logs.</p>
+                <div class="portfolio-screenshots">
+                    <div class="screenshot-box">
+                        <img src="PT-1.jfif" alt="PT Login Screen">
+                        <span>Login & Auth</span>
+                    </div>
+                    <div class="screenshot-box">
+                        <img src="PT-2.jfif" alt="Trainer Dashboard">
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="screenshot-box">
+                        <img src="PT-6.jfif" alt="Add Workout Log">
+                        <span>Workout Logs</span>
+                    </div>
+                    <div class="screenshot-box">
+                        <img src="PT-7.jfif" alt="Workout History Result">
+                        <span>History & Records</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        function handleLanguageChange(lang) {
-            if (!lang) return;
-            const t = translations[lang];
-            
-            document.getElementById('current-lang-badge').innerText = t.badge;
-            document.getElementById('nav-home').innerText = t.navHome;
-            document.getElementById('nav-services').innerText = t.navServices;
-            document.getElementById('nav-contact').innerText = t.navContact;
-            document.getElementById('hero-title').innerHTML = t.heroTitle;
-            document.getElementById('hero-desc').innerText = t.heroDesc;
-            document.getElementById('hero-btn').innerText = t.heroBtn;
-            document.getElementById('services-heading').innerHTML = t.servicesHeading;
-            document.getElementById('serv-1-title').innerText = t.serv1Title;
-            document.getElementById('serv-1-desc').innerText = t.serv1Desc;
-            document.querySelectorAll('.service-card')[1].querySelector('h3').innerText = t.serv2Title;
-            document.querySelectorAll('.service-card')[1].querySelector('p').innerText = t.serv2Desc;
-            document.querySelectorAll('.service-card')[2].querySelector('h3').innerText = t.serv3Title;
-            document.querySelectorAll('.service-card')[2].querySelector('p').innerText = t.serv3Desc;
-            document.getElementById('footer-text').innerText = t.footer;
+        <!-- Contact Us Section -->
+        <section class="section contact-section" id="contact">
+            <h2 class="section-title" id="contact-heading">Contact <span>Us</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 id="contact-sub">Get In Touch</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 id="addr-label">Address</h4>
+                            <p>No.1 Jalan TSR Taman Scientex Rawang, 48000 Rawang Selangor Malaysia</p>
+                        </div>
+                    </div>
 
-            const splash = document.getElementById('splash-screen');
-            const main = document.getElementById('main-content');
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4 id="phone-label">Contact No / WhatsApp</h4>
+                            <p>+60149674813</p>
+                        </div>
+                    </div>
 
-            splash.style.opacity = '0';
-            splash.style.visibility = 'hidden';
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 id="email-label">Email Address</h4>
+                            <p><a href="mailto:3idesignempire@gmail.com">3idesignempire@gmail.com</a></p>
+                        </div>
+                    </div>
 
-            main.style.display = 'block';
-            setTimeout(() => {
-                main.style.opacity = '1';
-            }, 50);
-        }
-    </script>
+                    <div style="margin-top: 15px;">
+                        <a href="https://wa.me/60149674813" target="_blank" class="whatsapp-btn-direct">
+                            <i class="fab fa-whatsapp" style="font-size: 1.2rem; margin-top:0;"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.504918730922!2d101.5795!3d3.3168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc7d825c8a5555%3A0x1234567890abcdef!2sTaman%20Scientex%2C%20Rawang%2C%20Selangor!5e0!3m2!1sen!2smy!4v1650000000000!5m2!1sen!2smy" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p id="footer-text">© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Small Medium Enterprises (SME) & Professionals.</p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                navAbout: "About Us",
+                navServices: "Services",
+                navPortfolio: "Portfolio",
+                navContact: "Contact Us",
+                heroTitle: "EMPOWERING Small Medium Enterprises (SME) WITH <span>DIGITALIZATION & AUTOMATION</span>",
+                heroDesc: "We transform traditional Small Medium Enterprises (SME) operations into smart, automated, and high-performance digital systems tailored for your business growth.",
+                heroBtn: "Explore Our Services",
+                aboutHeading: "About <span>Us</span>",
+                aboutText1: "3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local Small Medium Enterprises (SME) and businesses.",
+                aboutText2: "We believe every local enterprise deserves top-tier digital systems, automated workflows, and high-performance custom applications to thrive in today's competitive landscape. Our commitment is to empower your business growth through cutting-edge technology delivered with precision and excellence.",
+                servicesHeading: "Our Core <span>Services</span>",
+                serv1Title: "Custom Web & Mobile Application Development",
+                serv1Desc: "Modern, responsive, and high-speed web platforms and custom business systems built for Small Medium Enterprises (SME).",
+                serv2Title: "Business Digitalization & Automation",
+                serv2Desc: "Convert manual workflows, paper records, and repetitive tasks into sleek, automated cloud workflows.",
+                serv3Title: "IT Support & Maintenance",
+                serv3Desc: "Reliable part-time application support, bug fixing, and continuous system maintenance for smooth operations.",
+                portfolioHeading: "Our <span>Projects</span>",
+                projTitle: "Personal Trainer Log System",
+                projDesc: "A comprehensive mobile-friendly digital workout tracking and gym management system designed for personal trainers to effortlessly manage trainees, create master workout programs, and track real-time fitness logs.",
+                contactHeading: "Contact <span>Us</span>",
+                contactSub: "Get In Touch",
+                addrLabel: "Address",
+                phoneLabel: "Contact No / WhatsApp",
+                emailLabel: "Email Address",
+                footer: "© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Small Medium Enterprises (SME) & Professionals."
+            },
+            ms: {
+                navAbout: "Tentang Kami",
+                navServices: "Perkhidmatan",
+                navPortfolio: "Portfolio",
+                navContact: "Hubungi",
+                heroTitle: "MEMPERKASAKAN Small Medium Enterprises (SME) DENGAN <span>PENDIGITALAN & AUTOMASI</span>",
+                heroDesc: "Kami mengubah operasi tradisional Small Medium Enterprises (SME) kepada sistem digital pintar, automatik dan berprestasi tinggi untuk perniagaan anda.",
+                heroBtn: "Teroka Perkhidmatan Kami",
+                aboutHeading: "Tentang <span>Kami</span>",
+                aboutText1: "3i Design Empire dibina oleh pasukan IT yang bersemangat dan berpengalaman luas dengan misi jelas: membawa penyelesaian teknologi canggih dan inovasi AI terus kepada Small Medium Enterprises (SME) tempatan.",
+                aboutText2: "Kami percaya setiap perusahaan tempatan berhak mendapat sistem digital tahap tinggi, aliran kerja automatik, dan aplikasi tersuai berprestasi tinggi untuk berkembang maju. Komitmen kami adalah memperkasakan pertumbuhan perniagaan anda.",
+                servicesHeading: "Perkhidmatan <span>Utama</span> Kami",
+                serv1Title: "Pembangunan Web & Aplikasi Mudah Alih",
+                serv1Desc: "Platform web moden, responsif dan pantas serta sistem perniagaan tersuai untuk Small Medium Enterprises (SME).",
+                serv2Title: "Pendigitalan & Automasi Perniagaan",
+                serv2Desc: "Menukar aliran kerja manual dan tugas berulang kepada sistem awan automatik yang lancar.",
+                serv3Title: "Sokongan & Penyelenggaraan IT",
+                serv3Desc: "Sokongan aplikasi sambilan yang boleh dipercayai, pembetulan pepijat, dan penyelenggaraan sistem.",
+                portfolioHeading: "Projek <span>Kami</span>",
+                projTitle: "Personal Trainer Log System",
+                projDesc: "Sistem pengurusan gim dan penjejakan senaman digital mesra mudah alih yang komprehensif untuk jurulatih peribadi menguruskan pelatih dan program.",
+                contactHeading: "Hubungi <span>Kami</span>",
+                contactSub: "Hubungi Kami",
+                addrLabel: "Alamat",
+                phoneLabel: "No. Telefon / WhatsApp",
+                emailLabel: "Alamat E-mel",
+                footer: "© 2026 3i DESIGN EMPIRE. Hak Cipta Terpelihara. Melayani Small Medium Enterprises (SME) & Profesional."
+            },
+            ta: {
+                navAbout: "எங்களைப் பற்றி",
+                navServices: "சேவைகள்",
+                navPortfolio: "திட்டங்கள்",
+                navContact: "தொடர்பு",
+                heroTitle: "Small Medium Enterprises (SME)-களுக்கு <span>டிஜிட்டலைசேஷன் & ஆட்டோமேஷன்</span> மூலம் நவீன தொழில்நுட்பம்",
+                heroDesc: "பாரம்பரிய Small Medium Enterprises (SME) முறைகளை மாற்றி, ஆட்டோமேஷன் மற்றும் டிஜிட்டல் கிளவுட் சிஸ்டம் மூலம் உங்கள் வியாபார வளர்ச்சியை பெருக்குகிறோம்.",
+                heroBtn: "எங்கள் சேவைகளைக் காண்க",
+                aboutHeading: "எங்களைப் <span>பற்றி</span>",
+                aboutText1: "3i Design Empire என்பது அனுபவம் வாய்ந்த IT நிபுணர்களால் உருவாக்கப்பட்டது. உள்ளூர் Small Medium Enterprises (SME) மற்றும் வணிகங்களுக்கு அதிநவீன தொழில்நுட்ப தீர்வுகள் மற்றும் AI-அடிப்படையிலான சேவைகளை வழங்குவதே எங்கள் லட்சியம்.",
+                aboutText2: "ஒவ்வொரு வணிகமும் சிறந்த டிஜிட்டல் முறைகள் மற்றும் ஆட்டோமேஷன் தீர்வுகளைப் பெற வேண்டும் என்பதே எங்கள் நோக்கம். நவீன தொழில்நுட்பத்தின் மூலம் உங்கள் வியாபார வளர்ச்சியை மேம்படுத்துகிறோம்.",
+                servicesHeading: "எங்கள் முக்கிய <span>சேவைகள்</span>",
+                serv1Title: "வெப்சைட் & மொபைல் ஆப் டெவலப்மென்ட்",
+                serv1Desc: "Small Medium Enterprises (SME)-களுக்குத் தேவையான அதிநவீன, துரிதமான வெப்சைட்டுகள் மற்றும் கஸ்டம் பிசினஸ் சிஸ்டம்ஸ்.",
+                serv2Title: "பிசினஸ் டிஜிட்டலைசேஷன் & ஆட்டோமேஷன்",
+                serv2Desc: "மேனுவல் ஒர்க்குகள் மற்றும் ரிப்பீட்டிவ் டாஸ்க்குகளை நேர்த்தியான, ஆட்டோமேட்டட் கிளவுட் ஒர்க்ஃப்ளோவாக மாற்றுதல்.",
+                serv3Title: "ஐடி சப்போர்ட் & மெயின்டனன்ஸ்",
+                serv3Desc: "நம்பகமான பார்ட்-டைம் அப்ளிகேஷன் சப்போர்ட், பக் ஃபிக்சிங் மற்றும் சிஸ்டம் மெயின்டனன்ஸ் சேவைகள்.",
+                portfolioHeading: "எங்கள் <span>திட்டங்கள்</span>",
+                projTitle: "Personal Trainer Log System",
+                projDesc: "பர்சனல் ட்ரெய்னர்கள் தங்கள் ட்ரெய்னிகளை நிர்வகிக்கவும், ஒர்க்அவுட் புரோகிராம்களை உருவாக்கவும், ஃபிட்னஸ் லோக்குகளைக் கண்காணிக்கவும் உருவாக்கப்பட்ட பிரத்யேக சிஸ்டம்.",
+                contactHeading: "தொடர்பு <span>கொள்ள</span>",
+                contactSub: "எங்களைத் தொடர்பு கொள்ள",
+                addrLabel: "முகவரி",
+                phoneLabel: "தொலைபேசி எண் / WhatsApp",
+                emailLabel: "மின்னஞ்சல் முகவரி",
+                footer: "© 2026 3i DESIGN EMPIRE. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. Small Medium Enterprises (SME)-களுக்கு சேவை."
+            },
+            zh: {
+                navAbout: "关于我们",
+                navServices: "服务",
+                navPortfolio: "Portfolio",
+                navContact: "联系我们",
+                heroTitle: "以<span>数字化与自动化</span>赋能中小型企业 (SME)",
+                heroDesc: "我们将传统 Small Medium Enterprises (SME) 运营转化为专为您的业务增长量身定制的智能、自动化和高性能数字系统。",
+                heroBtn: "探索我们的服务",
+                aboutHeading: "关于 <span>我们</span>",
+                aboutText1: "3i Design Empire 由充满激情且经验丰富的 IT 团队创立，旨在将先进的技术解决方案和 AI 驱动的创新直接带给本地 Small Medium Enterprises (SME)。",
+                aboutText2: "我们相信每个本地企业都应该拥有顶级的数字系统、自动化工作流程和高性能的定制应用程序。我们的承诺是通过尖端技术赋能您的业务增长。",
+                servicesHeading: "我们的核心 <span>服务</span>",
+                serv1Title: "定制网页与移动应用开发",
+                serv1Desc: "为 Small Medium Enterprises (SME) 构建现代、响应式、高速的网页平台和定制化业务系统。",
+                serv2Title: "业务数字化与自动化转型",
+                serv2Desc: "将手动工作流程和重复性任务转换为流畅、自动化的数字云端工作流。",
+                serv3Title: "IT 支持与维护",
+                serv3Desc: "可靠的兼职应用支持、漏洞修复和持续的系统维护，确保顺畅运行。",
+                portfolioHeading: "我们的 <span>项目</span>",
+                projTitle: "Personal Trainer Log System",
+                projDesc: "专为私人教练设计的全面且对移动端友好的数字锻炼追踪与健身管理系统。",
+                contactHeading: "联系 <span>我们</span>",
+                contactSub: "取得联系",
+                addrLabel: "地址",
+                phoneLabel: "联系电话 / WhatsApp",
+                emailLabel: "电子邮件",
+                footer: "© 2026 3i DESIGN EMPIRE. 版权所有. 服务于 Small Medium Enterprises (SME) 与专业人士。"
+            }
+        };
+
+        function enterSite(lang) {
+            const t = translations[lang] || translations.en;
+            
+            document.getElementById('nav-about').innerText = t.navAbout;
+            document.getElementById('nav-services').innerText = t.navServices;
+            document.getElementById('nav-portfolio').innerText = t.portfolioHeading;
+            document.getElementById('nav-contact').innerText = t.navContact;
+            document.getElementById('hero-title').innerHTML = t.heroTitle;
+            document.getElementById('hero-desc').innerText = t.heroDesc;
+            document.getElementById('hero-btn').innerText = t.heroBtn;
+            document.getElementById('about-heading').innerHTML = t.aboutHeading;
+            document.getElementById('about-text-1').innerText = t.aboutText1;
+            document.getElementById('about-text-2').innerText = t.aboutText2;
+            document.getElementById('services-heading').innerHTML = t.servicesHeading;
+            document.getElementById('serv-1-title').innerText = t.serv1Title;
+            document.getElementById('serv-1-desc').innerText = t.serv1Desc;
+            document.getElementById('serv-2-title').innerText = t.serv2Title;
+            document.getElementById('serv-2-desc').innerText = t.serv2Desc;
+            document.getElementById('serv-3-title').innerText = t.serv3Title;
+            document.getElementById('serv-3-desc').innerText = t.serv3Desc;
+            document.getElementById('portfolio-heading').innerHTML = t.portfolioHeading;
+            document.getElementById('proj-title').innerText = t.projTitle;
+            document.getElementById('proj-desc').innerText = t.projDesc;
+            document.getElementById('contact-heading').innerHTML = t.contactHeading;
+            document.getElementById('contact-sub').innerText = t.contactSub;
+            document.getElementById('addr-label').innerText = t.addrLabel;
+            document.getElementById('phone-label').innerText = t.phoneLabel;
+            document.getElementById('email-label').innerText = t.emailLabel;
+            document.getElementById('footer-text').innerText = t.footer;
+
+            const splash = document.getElementById('splash-screen');
+            const main = document.getElementById('main-content');
+
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+
+            main.style.display = 'block';
+            setTimeout(() => {
+                main.style.opacity = '1';
+            }, 50);
+        }
+
+        function returnToSplash() {
+            const splash = document.getElementById('splash-screen');
+            const main = document.getElementById('main-content');
+
+            main.style.opacity = '0';
+            setTimeout(() => {
+                main.style.display = 'none';
+                splash.style.visibility = 'visible';
+                splash.style.opacity = '1';
+                window.scrollTo(0, 0);
+            }, 500);
+        }
+    </script>
 </body>
 </html>
