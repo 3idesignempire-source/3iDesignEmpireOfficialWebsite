@@ -33,7 +33,7 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            transition: opacity 1s ease, visibility 1s ease;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
             padding: 15px;
         }
 
@@ -190,7 +190,7 @@
         #main-content {
             display: none;
             opacity: 0;
-            transition: opacity 1s ease;
+            transition: opacity 0.5s ease;
         }
 
         /* Header */
@@ -260,7 +260,7 @@
             margin: 0 auto;
         }
 
-        /* Hero Section with Larger Empowering text and Even Larger Gold Digitalization text */
+        /* Hero Section */
         .hero {
             min-height: 88vh;
             display: flex;
@@ -271,6 +271,25 @@
             padding: 95px 15px 35px 15px;
             background: radial-gradient(circle at center, #141414 0%, #030303 75%);
             position: relative;
+        }
+
+        /* Pure Visual Tech Banner Styles */
+        .hero-visual-banner {
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto 18px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(191, 149, 63, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .hero-visual-banner:hover {
+            transform: translateY(-3px);
+        }
+        .hero-visual-banner svg {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
         .hero-line-1 {
@@ -308,7 +327,7 @@
             text-align: justify;
         }
 
-        /* Two-Row Grid Buttons Layout (2 buttons per row, 2 rows total, larger & wider) */
+        /* Two-Row Grid Buttons Layout */
         .hero-action-buttons {
             display: grid;
             grid-template-columns: repeat(2, minmax(190px, 240px));
@@ -699,51 +718,11 @@
                 padding: 14px 12px;
                 font-size: 0.9rem;
             }
-        }
-    
-        
-            .hero-banner-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-            .banner-tech-tags {
-                flex-direction: row;
-                border-left: none;
-                border-top: 1px solid rgba(191, 149, 63, 0.3);
-                padding-left: 0;
-                padding-top: 10px;
-                width: 100%;
-                justify-content: space-between;
-            }
-        }
-
-    
-        /* Pure Visual Tech Banner Styles */
-        .hero-visual-banner {
-            width: 100%;
-            max-width: 680px;
-            margin: 0 auto 18px auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(191, 149, 63, 0.2);
-            transition: transform 0.3s ease;
-        }
-        .hero-visual-banner:hover {
-            transform: translateY(-3px);
-        }
-        .hero-visual-banner svg {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        @media (max-width: 768px) {
             .hero-visual-banner {
                 max-width: 96%;
                 margin-bottom: 14px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -803,10 +782,10 @@
             </div>
         </header>
 
-        <!-- Hero Section: Empowering text scaled up, and Digitalization text made noticeably larger than empowering text -->
+        <!-- Hero Section -->
         <section class="hero" id="home">
             
-            <!-- Pure Visual Tech Automation Image Banner (No text/descriptions) -->
+            <!-- Pure Visual Tech Automation Image Banner -->
             <div class="hero-visual-banner">
                 <svg viewBox="0 0 800 280" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                     <defs>
@@ -829,37 +808,24 @@
                             <feComposite in="SourceGraphic" in2="blur" operator="over"/>
                         </filter>
                     </defs>
-                    
-                    <!-- Background Card -->
                     <rect x="10" y="10" width="780" height="260" rx="16" fill="url(#bgGrad)" stroke="#bf953f" stroke-width="2" stroke-opacity="0.5"/>
-                    
-                    <!-- Futuristic Grid Lines -->
                     <path d="M50 140 H750 M140 30 V250 M400 30 V250 M660 30 V250" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
                     <circle cx="400" cy="140" r="100" stroke="#bf953f" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="6 6"/>
                     <circle cx="400" cy="140" r="70" stroke="#00f2fe" stroke-opacity="0.2" stroke-width="1"/>
-                    
-                    <!-- Digital Circuit & Nodes -->
                     <path d="M120 140 L220 140 L260 90 L340 90 L380 140 L480 140 L520 190 L600 190 L680 140" stroke="url(#goldGlow)" stroke-width="3" fill="none" filter="url(#glow)"/>
-                    
-                    <!-- Glowing Connection Nodes -->
                     <circle cx="220" cy="140" r="6" fill="#fcf6ba" filter="url(#glow)"/>
                     <circle cx="340" cy="90" r="6" fill="#00f2fe" filter="url(#glow)"/>
                     <circle cx="480" cy="140" r="6" fill="#fcf6ba" filter="url(#glow)"/>
                     <circle cx="520" cy="190" r="6" fill="#00f2fe" filter="url(#glow)"/>
                     <circle cx="680" cy="140" r="6" fill="#fcf6ba" filter="url(#glow)"/>
-
-                    <!-- Central Tech Core Icon / Hologram -->
                     <g transform="translate(365, 105)">
                         <polygon points="35,0 70,20 70,60 35,80 0,60 0,20" fill="#181818" stroke="url(#goldGlow)" stroke-width="2"/>
                         <circle cx="35" cy="40" r="15" fill="#bf953f" fill-opacity="0.3" stroke="#fcf6ba" stroke-width="2"/>
                         <path d="M25 40 L32 47 L45 33" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
-
-                    <!-- Floating Data Bars (Analytics/Automation) -->
                     <rect x="150" y="170" width="12" height="40" rx="4" fill="url(#cyanGlow)"/>
                     <rect x="175" y="150" width="12" height="60" rx="4" fill="url(#goldGlow)"/>
                     <rect x="200" y="130" width="12" height="80" rx="4" fill="url(#cyanGlow)"/>
-
                     <rect x="580" y="90" width="12" height="70" rx="4" fill="url(#goldGlow)"/>
                     <rect x="605" y="110" width="12" height="50" rx="4" fill="url(#cyanGlow)"/>
                     <rect x="630" y="70" width="12" height="90" rx="4" fill="url(#goldGlow)"/>
@@ -876,11 +842,7 @@
                 <a href="#about" class="action-chip-btn" id="btn-about"><i class="fas fa-info-circle"></i> About Us</a>
                 <a href="#portfolio" class="action-chip-btn" id="btn-projects"><i class="fas fa-project-diagram"></i> Our Projects</a>
                 <a href="#contact" class="action-chip-btn" id="btn-contact"><i class="fas fa-envelope"></i> Contact Us</a>
-            
-            <!-- Tech Automation & Digitalization Banner -->
             </div>
-
-        </div>
         </section>
 
         <!-- About Us Section -->
@@ -889,11 +851,7 @@
             <div class="about-card">
                 <p id="about-text-1">3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local small medium enterprise and businesses.</p>
                 <p id="about-text-2">We believe every local enterprise deserves top-tier digital systems, automated workflows, and high-performance custom applications to thrive in today's competitive landscape. Our commitment is to empower your business growth through cutting-edge technology delivered with precision and excellence.</p>
-            
-            <!-- Tech Automation & Digitalization Banner -->
             </div>
-
-        </div>
         </section>
 
         <!-- Services Section -->
@@ -915,11 +873,7 @@
                     <h3 id="serv-3-title">IT Support & Maintenance</h3>
                     <p id="serv-3-desc">Reliable part-time application support, bug fixing, and continuous system maintenance for smooth operations.</p>
                 </div>
-            
-            <!-- Tech Automation & Digitalization Banner -->
             </div>
-
-        </div>
         </section>
 
         <!-- Portfolio Section -->
@@ -947,11 +901,7 @@
                         <span>🔍 Click to Zoom (History & Records)</span>
                     </div>
                 </div>
-            
-            <!-- Tech Automation & Digitalization Banner -->
             </div>
-
-        </div>
         </section>
 
         <!-- Fullscreen Modal -->
@@ -1001,11 +951,7 @@
                 <div class="map-box">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.504918730922!2d101.5795!3d3.3168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc7d825c8a5555%3A0x1234567890abcdef!2sTaman%20Scientex%2C%20Rawang%2C%20Selangor!5e0!3m2!1sen!2smy!4v1650000000000!5m2!1sen!2smy" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-            
-            <!-- Tech Automation & Digitalization Banner -->
             </div>
-
-        </div>
         </section>
 
         <footer>
@@ -1164,7 +1110,6 @@
             document.getElementById('portfolio-heading').innerHTML = t.portfolioHeading;
             document.getElementById('proj-title').innerText = t.projTitle;
             document.getElementById('proj-desc').innerText = t.projDesc;
-            
             document.getElementById('contact-heading').innerHTML = t.contactHeading;
             document.getElementById('contact-sub').innerText = t.contactSub;
             document.getElementById('addr-label').innerText = t.addrLabel;
@@ -1181,7 +1126,7 @@
             main.style.display = 'block';
             setTimeout(() => {
                 main.style.opacity = '1';
-            }, 50);
+            }, 30);
         }
 
         function returnToSplash() {
@@ -1194,7 +1139,7 @@
                 splash.style.visibility = 'visible';
                 splash.style.opacity = '1';
                 window.scrollTo(0, 0);
-            }, 500);
+            }, 300);
         }
     </script>
 </body>
