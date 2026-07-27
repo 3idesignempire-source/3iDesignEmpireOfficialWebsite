@@ -204,7 +204,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 25px;
+            padding: 10px 25px;
             z-index: 1000;
         }
 
@@ -230,13 +230,12 @@
             white-space: nowrap;
         }
 
-        /* ONLY ONE HOME BUTTON ON RIGHT SIDE AS REQUESTED */
         .home-btn-nav {
             background: rgba(191, 149, 63, 0.15);
             border: 1px solid rgba(191, 149, 63, 0.6);
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #fcf6ba;
             font-weight: 600;
             cursor: pointer;
@@ -244,7 +243,7 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
 
         .home-btn-nav:hover {
@@ -253,71 +252,80 @@
             box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);
         }
 
-        /* Sections with reduced tight gaps */
+        /* Sections with reduced gaps as requested */
         .section {
-            padding: 50px 20px;
+            padding: 30px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
+        /* Hero Section - Moved up closer to header with minimal gap */
         .hero {
-            height: 100vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 70px 20px 20px 20px;
             background: radial-gradient(circle at center, #141414 0%, #030303 75%);
             position: relative;
         }
 
         .hero h1 {
-            font-size: 2.3rem;
+            font-size: 2.1rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             max-width: 800px;
-            line-height: 1.25;
+            line-height: 1.2;
             color: #ffffff;
+            text-transform: lowercase;
         }
 
         .hero h1 span {
             background: linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-transform: none;
+        }
+
+        /* Capitalize specific letters/words or target first letter E */
+        .empower-title::first-letter {
+            text-transform: uppercase;
         }
 
         .hero p {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #a3a3a3;
             max-width: 650px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             line-height: 1.5;
+            text-align: justify;
         }
 
         .cta-btn {
             background: linear-gradient(135deg, #bf953f, #aa771c);
             color: #050505;
-            padding: 12px 28px;
+            padding: 10px 25px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.95rem;
-            box-shadow: 0 8px 20px rgba(191, 149, 63, 0.3);
+            font-size: 0.9rem;
+            box-shadow: 0 6px 15px rgba(191, 149, 63, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .cta-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(191, 149, 63, 0.5);
+            box-shadow: 0 10px 20px rgba(191, 149, 63, 0.5);
             background: linear-gradient(135deg, #fcf6ba, #bf953f);
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             color: #ffffff;
             line-height: 1.2;
         }
@@ -328,55 +336,59 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* About Us - Clean filled box with balanced font sizing */
+        /* About Us - Reduced gap by 50-70%, justified text */
         .about-section {
             background: #060606;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
 
         .about-card {
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(191, 149, 63, 0.25);
-            padding: 30px 25px;
-            border-radius: 16px;
+            padding: 25px 20px;
+            border-radius: 14px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-            text-align: left;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
             max-width: 900px;
             margin: 0 auto;
         }
 
         .about-card p {
             color: #cccccc;
-            font-size: 0.98rem;
-            line-height: 1.65;
-            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            text-align: justify;
         }
 
         .about-card p:last-child {
             margin-bottom: 0;
         }
 
-        /* Services */
+        /* Services - Reduced gap, icons centered */
         .services-section {
             background: #030303;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            gap: 15px;
         }
 
         .service-card {
             background: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(191, 149, 63, 0.2);
-            padding: 25px 20px;
-            border-radius: 14px;
+            padding: 22px 18px;
+            border-radius: 12px;
             backdrop-filter: blur(10px);
             transition: transform 0.3s, border-color 0.3s;
-            text-align: left;
+            text-align: center; /* Center everything inside card including icons and titles */
         }
 
         .service-card:hover {
@@ -389,64 +401,93 @@
             background: linear-gradient(135deg, #bf953f, #fcf6ba);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            display: inline-block;
         }
 
         .service-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 10px;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
             color: #ffffff;
             line-height: 1.3;
         }
 
         .service-card p {
             color: #a3a3a3;
-            font-size: 0.9rem;
-            line-height: 1.5;
+            font-size: 0.88rem;
+            line-height: 1.45;
+            text-align: justify;
         }
 
-        /* Portfolio */
+        /* Portfolio - Reduced gap, centered title, justified text, horizontal scrollable images */
         .portfolio-section {
             background: #060606;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
 
         .portfolio-card {
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(191, 149, 63, 0.3);
-            border-radius: 16px;
-            padding: 30px 20px;
+            border-radius: 14px;
+            padding: 25px 20px;
             max-width: 900px;
             margin: 0 auto;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            text-align: center;
         }
 
         .portfolio-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #fcf6ba;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-family: 'Cinzel', serif;
+            text-align: center;
         }
 
         .portfolio-card p {
             color: #b0b0b0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin-bottom: 15px;
+            text-align: justify;
         }
 
+        /* Horizontal Scrollable Screenshots Container */
         .portfolio-screenshots {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            display: flex;
             gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 10px;
             margin-top: 15px;
+            justify-content: flex-start;
+            scrollbar-width: thin;
+            scrollbar-color: #bf953f #111;
+        }
+
+        .portfolio-screenshots::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .portfolio-screenshots::-webkit-scrollbar-track {
+            background: #111;
+            border-radius: 10px;
+        }
+
+        .portfolio-screenshots::-webkit-scrollbar-thumb {
+            background: #bf953f;
+            border-radius: 10px;
         }
 
         .screenshot-box {
+            flex: 0 0 160px;
+            scroll-snap-align: start;
             background: #111;
             border: 1px solid rgba(191, 149, 63, 0.2);
             border-radius: 10px;
-            padding: 12px;
+            padding: 10px;
             text-align: center;
         }
 
@@ -454,63 +495,65 @@
             width: 100%;
             height: auto;
             border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            margin-bottom: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+            margin-bottom: 6px;
         }
 
         .screenshot-box span {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: #bf953f;
             font-weight: 600;
         }
 
-        /* Contact */
+        /* Contact - Reduced gap before copyright */
         .contact-section {
             background: #030303;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
+            padding-top: 25px;
+            padding-bottom: 15px; /* Minimized bottom padding */
         }
 
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            gap: 20px;
             max-width: 1000px;
             margin: 0 auto;
             background: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(191, 149, 63, 0.25);
-            border-radius: 16px;
-            padding: 30px 20px;
+            border-radius: 14px;
+            padding: 25px 20px;
             backdrop-filter: blur(10px);
         }
 
         .contact-info h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #fcf6ba;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-family: 'Cinzel', serif;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 15px;
         }
 
         .contact-item i {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #bf953f;
             margin-top: 3px;
         }
 
         .contact-item div h4 {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #ffffff;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .contact-item div p, .contact-item div a {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: #b0b0b0;
             text-decoration: none;
             transition: color 0.3s;
@@ -526,14 +569,14 @@
             gap: 8px;
             background: #25d366;
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 8px 18px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin-top: 5px;
             transition: transform 0.3s, background 0.3s;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
         }
 
         .whatsapp-btn-direct:hover {
@@ -544,7 +587,7 @@
         .map-box {
             width: 100%;
             height: 100%;
-            min-height: 280px;
+            min-height: 250px;
             border-radius: 10px;
             overflow: hidden;
             border: 1px solid rgba(191, 149, 63, 0.3);
@@ -557,13 +600,15 @@
             filter: grayscale(80%) invert(90%) contrast(90%);
         }
 
+        /* Reduced gap between contact box and footer copyright text */
         footer {
             text-align: center;
-            padding: 25px 20px;
+            padding: 15px 20px;
             background: #020202;
             color: #737373;
             font-size: 0.8rem;
-            border-top: 1px solid rgba(191, 149, 63, 0.1);
+            border-top: none;
+            margin-top: 15px;
         }
 
         @media (max-width: 768px) {
@@ -571,10 +616,10 @@
                 grid-template-columns: 1fr;
             }
             header {
-                padding: 10px 15px;
+                padding: 8px 15px;
             }
-            .hero h1 { font-size: 2rem; }
-            .section-title { font-size: 1.7rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .section-title { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -603,7 +648,7 @@
             <div class="logo-container">
                 <div class="logo-3d">3i DESIGN EMPIRE</div>
             </div>
-            <div class="splash-subtitle" id="splash-subtitle-text">EMPOWERING Small Medium Enterprises (SME) WITH DIGITALIZATION & AUTOMATION SOLUTIONS</div>
+            <div class="splash-subtitle" id="splash-subtitle-text">empowering small medium enterprise with digitalization & automation solutions</div>
             
             <div class="lang-selector-box">
                 <h3 id="lang-box-title">Please Select Your Preferred Language</h3>
@@ -630,36 +675,35 @@
                 </svg>
                 <div class="nav-logo">3i DESIGN EMPIRE</div>
             </div>
-            <!-- ONLY ONE HOME BUTTON ON RIGHT SIDE AS REQUESTED -->
             <div>
                 <button class="home-btn-nav" onclick="returnToSplash()"><i class="fas fa-home"></i> Home</button>
             </div>
         </header>
 
-        <!-- Hero Section -->
+        <!-- Hero Section (Empowering lowercase except E, moved up close to header) -->
         <section class="hero" id="home">
-            <h1 id="hero-title">EMPOWERING Small Medium Enterprises (SME) WITH <span>DIGITALIZATION & AUTOMATION</span></h1>
-            <p id="hero-desc">We transform traditional Small Medium Enterprises (SME) operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
+            <h1 id="hero-title" class="empower-title">empowering small medium enterprise with <span>digitalization & automation</span></h1>
+            <p id="hero-desc">We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
             <a href="#services" class="cta-btn" id="hero-btn">Explore Our Services</a>
         </section>
 
-        <!-- About Us Section -->
+        <!-- About Us Section (Gap reduced by 50-70%, text justified) -->
         <section class="section about-section" id="about">
             <h2 class="section-title" id="about-heading">About <span>Us</span></h2>
             <div class="about-card">
-                <p id="about-text-1">3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local Small Medium Enterprises (SME) and businesses.</p>
+                <p id="about-text-1">3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local small medium enterprise and businesses.</p>
                 <p id="about-text-2">We believe every local enterprise deserves top-tier digital systems, automated workflows, and high-performance custom applications to thrive in today's competitive landscape. Our commitment is to empower your business growth through cutting-edge technology delivered with precision and excellence.</p>
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Services Section (Icons and content centered) -->
         <section class="section services-section" id="services">
             <h2 class="section-title" id="services-heading">Our Core <span>Services</span></h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-laptop-code"></i>
                     <h3 id="serv-1-title">Custom Web & Mobile Application Development</h3>
-                    <p id="serv-1-desc">Modern, responsive, and high-speed web platforms and custom business systems built for Small Medium Enterprises (SME).</p>
+                    <p id="serv-1-desc">Modern, responsive, and high-speed web platforms and custom business systems built for small medium enterprise.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-cogs"></i>
@@ -674,7 +718,7 @@
             </div>
         </section>
 
-        <!-- Portfolio Section -->
+        <!-- Portfolio Section (Personal trainer centered, justified text, horizontal scrollable images) -->
         <section class="section portfolio-section" id="portfolio">
             <h2 class="section-title" id="portfolio-heading">Our <span>Projects</span></h2>
             <div class="portfolio-card">
@@ -701,7 +745,7 @@
             </div>
         </section>
 
-        <!-- Contact Us Section -->
+        <!-- Contact Us Section (Gap before copyright reduced) -->
         <section class="section contact-section" id="contact">
             <h2 class="section-title" id="contact-heading">Contact <span>Us</span></h2>
             <div class="contact-container">
@@ -732,7 +776,7 @@
                         </div>
                     </div>
 
-                    <div style="margin-top: 10px;">
+                    <div style="margin-top: 8px;">
                         <a href="https://wa.me/60149674813" target="_blank" class="whatsapp-btn-direct">
                             <i class="fab fa-whatsapp" style="font-size: 1.1rem; margin-top:0;"></i> Chat on WhatsApp
                         </a>
@@ -753,19 +797,15 @@
     <script>
         const translations = {
             en: {
-                navAbout: "About Us",
-                navServices: "Services",
-                navPortfolio: "Portfolio",
-                navContact: "Contact Us",
-                heroTitle: "EMPOWERING Small Medium Enterprises (SME) WITH <span>DIGITALIZATION & AUTOMATION</span>",
-                heroDesc: "We transform traditional Small Medium Enterprises (SME) operations into smart, automated, and high-performance digital systems tailored for your business growth.",
+                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
+                heroDesc: "We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.",
                 heroBtn: "Explore Our Services",
                 aboutHeading: "About <span>Us</span>",
-                aboutText1: "3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local Small Medium Enterprises (SME) and businesses.",
+                aboutText1: "3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local small medium enterprise and businesses.",
                 aboutText2: "We believe every local enterprise deserves top-tier digital systems, automated workflows, and high-performance custom applications to thrive in today's competitive landscape. Our commitment is to empower your business growth through cutting-edge technology delivered with precision and excellence.",
                 servicesHeading: "Our Core <span>Services</span>",
                 serv1Title: "Custom Web & Mobile Application Development",
-                serv1Desc: "Modern, responsive, and high-speed web platforms and custom business systems built for Small Medium Enterprises (SME).",
+                serv1Desc: "Modern, responsive, and high-speed web platforms and custom business systems built for small medium enterprise.",
                 serv2Title: "Business Digitalization & Automation",
                 serv2Desc: "Convert manual workflows, paper records, and repetitive tasks into sleek, automated cloud workflows.",
                 serv3Title: "IT Support & Maintenance",
@@ -781,19 +821,15 @@
                 footer: "© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Small Medium Enterprises (SME) & Professionals."
             },
             ms: {
-                navAbout: "Tentang Kami",
-                navServices: "Perkhidmatan",
-                navPortfolio: "Portfolio",
-                navContact: "Hubungi",
-                heroTitle: "MEMPERKASAKAN Small Medium Enterprises (SME) DENGAN <span>PENDIGITALAN & AUTOMASI</span>",
-                heroDesc: "Kami mengubah operasi tradisional Small Medium Enterprises (SME) kepada sistem digital pintar, automatik dan berprestasi tinggi untuk perniagaan anda.",
+                heroTitle: "memperkasakan perusahaan kecil sederhana dengan <span>pendigitalan & automasi</span>",
+                heroDesc: "Kami mengubah operasi tradisional perusahaan kecil sederhana kepada sistem digital pintar, automatik dan berprestasi tinggi untuk perniagaan anda.",
                 heroBtn: "Teroka Perkhidmatan Kami",
                 aboutHeading: "Tentang <span>Kami</span>",
-                aboutText1: "3i Design Empire dibina oleh pasukan IT yang bersemangat dan berpengalaman luas dengan misi jelas: membawa penyelesaian teknologi canggih dan inovasi AI terus kepada Small Medium Enterprises (SME) tempatan.",
+                aboutText1: "3i Design Empire dibina oleh pasukan IT yang bersemangat dan berpengalaman luas dengan misi jelas: membawa penyelesaian teknologi canggih dan inovasi AI terus kepada perusahaan kecil sederhana tempatan.",
                 aboutText2: "Kami percaya setiap perusahaan tempatan berhak mendapat sistem digital tahap tinggi, aliran kerja automatik, dan aplikasi tersuai berprestasi tinggi untuk berkembang maju. Komitmen kami adalah memperkasakan pertumbuhan perniagaan anda.",
                 servicesHeading: "Perkhidmatan <span>Utama</span> Kami",
                 serv1Title: "Pembangunan Web & Aplikasi Mudah Alih",
-                serv1Desc: "Platform web moden, responsif dan pantas serta sistem perniagaan tersuai untuk Small Medium Enterprises (SME).",
+                serv1Desc: "Platform web moden, responsif dan pantas serta sistem perniagaan tersuai untuk perusahaan kecil sederhana.",
                 serv2Title: "Pendigitalan & Automasi Perniagaan",
                 serv2Desc: "Menukar aliran kerja manual dan tugas berulang kepada sistem awan automatik yang lancar.",
                 serv3Title: "Sokongan & Penyelenggaraan IT",
@@ -809,19 +845,15 @@
                 footer: "© 2026 3i DESIGN EMPIRE. Hak Cipta Terpelihara. Melayani Small Medium Enterprises (SME) & Profesional."
             },
             ta: {
-                navAbout: "எங்களைப் பற்றி",
-                navServices: "சேவைகள்",
-                navPortfolio: "திட்டங்கள்",
-                navContact: "தொடர்பு",
-                heroTitle: "Small Medium Enterprises (SME)-களுக்கு <span>டிஜிட்டலைசேஷன் & ஆட்டோமேஷன்</span> மூலம் நவீன தொழில்நுட்பம்",
-                heroDesc: "பாரம்பரிய Small Medium Enterprises (SME) முறைகளை மாற்றி, ஆட்டோமேஷன் மற்றும் டிஜிட்டல் கிளவுட் சிஸ்டம் மூலம் உங்கள் வியாபார வளர்ச்சியை பெருக்குகிறோம்.",
+                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
+                heroDesc: "பாரம்பரிய small medium enterprise முறைகளை மாற்றி, ஆட்டோமேஷன் மற்றும் டிஜிட்டல் கிளவுட் சிஸ்டம் மூலம் உங்கள் வியாபார வளர்ச்சியை பெருக்குகிறோம்.",
                 heroBtn: "எங்கள் சேவைகளைக் காண்க",
                 aboutHeading: "எங்களைப் <span>பற்றி</span>",
-                aboutText1: "3i Design Empire என்பது அனுபவம் வாய்ந்த IT நிபுணர்களால் உருவாக்கப்பட்டது. உள்ளூர் Small Medium Enterprises (SME) மற்றும் வணிகங்களுக்கு அதிநவீன தொழில்நுட்ப தீர்வுகள் மற்றும் AI-அடிப்படையிலான சேவைகளை வழங்குவதே எங்கள் லட்சியம்.",
+                aboutText1: "3i Design Empire என்பது அனுபவம் வாய்ந்த IT நிபுணர்களால் உருவாக்கப்பட்டது. உள்ளூர் small medium enterprise மற்றும் வணிகங்களுக்கு அதிநவீன தொழில்நுட்ப தீர்வுகள் மற்றும் AI-அடிப்படையிலான சேவைகளை வழங்குவதே எங்கள் லட்சியம்.",
                 aboutText2: "ஒவ்வொரு வணிகமும் சிறந்த டிஜிட்டல் முறைகள் மற்றும் ஆட்டோமேஷன் தீர்வுகளைப் பெற வேண்டும் என்பதே எங்கள் நோக்கம். நவீன தொழில்நுட்பத்தின் மூலம் உங்கள் வியாபார வளர்ச்சியை மேம்படுத்துகிறோம்.",
                 servicesHeading: "எங்கள் முக்கிய <span>சேவைகள்</span>",
                 serv1Title: "வெப்சைட் & மொபைல் ஆப் டெவலப்மென்ட்",
-                serv1Desc: "Small Medium Enterprises (SME)-களுக்குத் தேவையான அதிநவீன, துரிதமான வெப்சைட்டுகள் மற்றும் கஸ்டம் பிசினஸ் சிஸ்டம்ஸ்.",
+                serv1Desc: "Small medium enterprise-களுக்குத் தேவையான அதிநவீன, துரிதமான வெப்சைட்டுகள் மற்றும் கஸ்டம் பிசினஸ் சிஸ்டம்ஸ்.",
                 serv2Title: "பிசினஸ் டிஜிட்டலைசேஷன் & ஆட்டோமேஷன்",
                 serv2Desc: "மேனுவல் ஒர்க்குகள் மற்றும் ரிப்பீட்டிவ் டாஸ்க்குகளை நேர்த்தியான, ஆட்டோமேட்டட் கிளவுட் ஒர்க்ஃப்ளோவாக மாற்றுதல்.",
                 serv3Title: "ஐடி சப்போர்ட் & மெயின்டனன்ஸ்",
@@ -837,19 +869,15 @@
                 footer: "© 2026 3i DESIGN EMPIRE. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. Small Medium Enterprises (SME)-களுக்கு சேவை."
             },
             zh: {
-                navAbout: "关于我们",
-                navServices: "服务",
-                navPortfolio: "Portfolio",
-                navContact: "联系我们",
-                heroTitle: "以<span>数字化与自动化</span>赋能中小型企业 (SME)",
-                heroDesc: "我们将传统 Small Medium Enterprises (SME) 运营转化为专为您的业务增长量身定制的智能、自动化和高性能数字系统。",
+                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
+                heroDesc: "我们将传统 small medium enterprise 运营转化为专为您的业务增长量身定制的智能、自动化和高性能数字系统。",
                 heroBtn: "探索我们的服务",
                 aboutHeading: "关于 <span>我们</span>",
-                aboutText1: "3i Design Empire 由充满激情且经验丰富的 IT 团队创立，旨在将先进的技术解决方案和 AI 驱动的创新直接带给本地 Small Medium Enterprises (SME)。",
+                aboutText1: "3i Design Empire 由充满激情且经验丰富的 IT 团队创立，旨在将先进的技术解决方案和 AI 驱动的创新直接带给本地 small medium enterprise。",
                 aboutText2: "我们相信每个本地企业都应该拥有顶级的数字系统、自动化工作流程和高性能的定制应用程序。我们的承诺是通过尖端技术赋能您的业务增长。",
                 servicesHeading: "我们的核心 <span>服务</span>",
                 serv1Title: "定制网页与移动应用开发",
-                serv1Desc: "为 Small Medium Enterprises (SME) 构建现代、响应式、高速的网页平台和定制化业务系统。",
+                serv1Desc: "为 small medium enterprise 构建现代、响应式、高速的网页平台和定制化业务系统。",
                 serv2Title: "业务数字化与自动化转型",
                 serv2Desc: "将手动工作流程和重复性任务转换为流畅、自动化的数字云端工作流。",
                 serv3Title: "IT 支持与维护",
@@ -859,7 +887,7 @@
                 projDesc: "专为私人教练设计的全面且对移动端友好的数字锻炼追踪与健身管理系统。",
                 contactHeading: "联系 <span>我们</span>",
                 contactSub: "取得联系",
-                addrLabel: "地址",
+                addrLabel: "Address",
                 phoneLabel: "联系电话 / WhatsApp",
                 emailLabel: "电子邮件",
                 footer: "© 2026 3i DESIGN EMPIRE. 版权所有. 服务于 Small Medium Enterprises (SME) 与专业人士。"
