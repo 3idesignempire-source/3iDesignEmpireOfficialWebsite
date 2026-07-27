@@ -49,9 +49,9 @@
         }
 
         .crown-logo-graphic {
-            width: 90px;
-            height: 60px;
-            margin-bottom: 10px;
+            width: 95px;
+            height: 65px;
+            margin-bottom: 12px;
             opacity: 0;
             animation: fadeInCrown 1.2s ease 0.2s forwards, floatCrown 3s ease-in-out infinite alternate;
             filter: drop-shadow(0 15px 25px rgba(191, 149, 63, 0.6));
@@ -69,13 +69,13 @@
 
         .logo-container {
             perspective: 1200px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             width: 100%;
         }
 
         .logo-3d {
             font-family: 'Cinzel', serif;
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 800;
             background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
             -webkit-background-clip: text;
@@ -113,9 +113,9 @@
         }
 
         .splash-subtitle {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #d4d4d4;
-            margin-bottom: 25px;
+            margin-bottom: 28px;
             letter-spacing: 1px;
             text-transform: uppercase;
             font-weight: 500;
@@ -137,7 +137,7 @@
             background: rgba(18, 18, 18, 0.95);
             border: 1px solid rgba(191, 149, 63, 0.4);
             backdrop-filter: blur(16px);
-            padding: 20px 25px;
+            padding: 22px 28px;
             border-radius: 18px;
             text-align: center;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(191, 149, 63, 0.15);
@@ -152,8 +152,8 @@
         }
 
         .lang-selector-box h3 {
-            font-size: 0.95rem;
-            margin-bottom: 12px;
+            font-size: 1rem;
+            margin-bottom: 14px;
             color: #f1f1f1;
             font-weight: 500;
         }
@@ -161,7 +161,7 @@
         .lang-buttons-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 12px;
             margin-top: 10px;
         }
 
@@ -169,9 +169,9 @@
             background: #080808;
             color: #fcf6ba;
             border: 2px solid #bf953f;
-            padding: 10px 12px;
+            padding: 11px 14px;
             border-radius: 10px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             outline: none;
@@ -193,49 +193,50 @@
             transition: opacity 1s ease;
         }
 
+        /* Enlarger Header & Home Button with optimal breathing space */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(5, 5, 5, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(191, 149, 63, 0.2);
+            background: rgba(5, 5, 5, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(191, 149, 63, 0.25);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 6px 20px;
+            padding: 12px 28px;
             z-index: 1000;
         }
 
         .nav-logo-area {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .nav-crown-svg {
-            width: 20px;
-            height: 15px;
+            width: 28px;
+            height: 20px;
         }
 
         .nav-logo {
             font-family: 'Cinzel', serif;
-            font-size: 0.9rem;
+            font-size: 1.15rem;
             font-weight: 700;
             background: linear-gradient(135deg, #bf953f, #fcf6ba);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             white-space: nowrap;
         }
 
         .home-btn-nav {
-            background: rgba(191, 149, 63, 0.15);
-            border: 1px solid rgba(191, 149, 63, 0.6);
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.75rem;
+            background: rgba(191, 149, 63, 0.2);
+            border: 1.5px solid rgba(191, 149, 63, 0.7);
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
             color: #fcf6ba;
             font-weight: 600;
             cursor: pointer;
@@ -243,40 +244,41 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
         }
 
         .home-btn-nav:hover {
             background: #bf953f;
             color: #050505;
-            box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);
+            box-shadow: 0 0 18px rgba(191, 149, 63, 0.5);
+            transform: translateY(-1px);
         }
 
         .section {
-            padding: 10px 20px;
+            padding: 40px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        /* Hero Section - Maximum gap reduction for both top and bottom */
+        /* Hero Section - Perfect balanced gap below header, pleasant breathing room */
         .hero {
-            min-height: auto;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 36px 20px 4px 20px; /* Extremely minimal top padding right under header, almost zero bottom padding */
+            padding: 95px 20px 30px 20px;
             background: radial-gradient(circle at center, #141414 0%, #030303 75%);
             position: relative;
         }
 
         .hero h1 {
-            font-size: 1.85rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 6px;
-            max-width: 800px;
-            line-height: 1.15;
+            margin-bottom: 14px;
+            max-width: 820px;
+            line-height: 1.25;
             color: #ffffff;
             text-transform: lowercase;
         }
@@ -293,40 +295,41 @@
         }
 
         .hero p {
-            font-size: 0.88rem;
-            color: #a3a3a3;
-            max-width: 650px;
-            margin-bottom: 8px; /* Extremely minimal gap above button */
-            line-height: 1.35;
+            font-size: 0.98rem;
+            color: #b0b0b0;
+            max-width: 680px;
+            margin-bottom: 22px;
+            line-height: 1.5;
             text-align: justify;
         }
 
         .cta-btn {
             background: linear-gradient(135deg, #bf953f, #aa771c);
             color: #050505;
-            padding: 6px 20px;
+            padding: 11px 28px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.82rem;
-            box-shadow: 0 4px 10px rgba(191, 149, 63, 0.3);
+            font-size: 0.95rem;
+            box-shadow: 0 6px 18px rgba(191, 149, 63, 0.35);
             transition: transform 0.3s, box-shadow 0.3s;
-            margin-bottom: 2px; /* Zero unnecessary gap below button before About Us */
         }
 
         .cta-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(191, 149, 63, 0.5);
+            box-shadow: 0 10px 22px rgba(191, 149, 63, 0.55);
             background: linear-gradient(135deg, #fcf6ba, #bf953f);
         }
 
         .section-title {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 18px;
             color: #ffffff;
             line-height: 1.2;
+            /* Extra top spacing requested for major section headers */
+            margin-top: 15px;
         }
 
         .section-title span {
@@ -335,30 +338,30 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* About Us - Ultra tight padding */
+        /* About Us - Ideal pleasant spacing from Explore Our Services */
         .about-section {
             background: #060606;
-            border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 8px;
-            padding-bottom: 12px;
+            border-top: 1px solid rgba(191, 149, 63, 0.12);
+            padding-top: 50px;
+            padding-bottom: 35px;
         }
 
         .about-card {
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(191, 149, 63, 0.25);
-            padding: 16px 16px;
-            border-radius: 12px;
+            padding: 26px 22px;
+            border-radius: 14px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.8);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.8);
             max-width: 900px;
             margin: 0 auto;
         }
 
         .about-card p {
             color: #cccccc;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 8px;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 14px;
             text-align: justify;
         }
 
@@ -366,25 +369,26 @@
             margin-bottom: 0;
         }
 
-        /* Services */
+        /* Services - Generous top spacing before Our Core Services */
         .services-section {
             background: #030303;
-            border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 10px;
-            padding-bottom: 12px;
+            border-top: 1px solid rgba(191, 149, 63, 0.12);
+            padding-top: 50px;
+            padding-bottom: 35px;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 10px;
+            gap: 18px;
+            margin-top: 10px;
         }
 
         .service-card {
             background: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(191, 149, 63, 0.2);
-            padding: 15px 14px;
-            border-radius: 10px;
+            padding: 25px 20px;
+            border-radius: 12px;
             backdrop-filter: blur(10px);
             transition: transform 0.3s, border-color 0.3s;
             text-align: center;
@@ -396,76 +400,77 @@
         }
 
         .service-card i {
-            font-size: 1.8rem;
+            font-size: 2.3rem;
             background: linear-gradient(135deg, #bf953f, #fcf6ba);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
+            margin-bottom: 14px;
             display: inline-block;
         }
 
         .service-card h3 {
-            font-size: 0.98rem;
-            margin-bottom: 5px;
+            font-size: 1.08rem;
+            margin-bottom: 10px;
             color: #ffffff;
-            line-height: 1.25;
+            line-height: 1.35;
         }
 
         .service-card p {
             color: #a3a3a3;
-            font-size: 0.83rem;
-            line-height: 1.4;
+            font-size: 0.9rem;
+            line-height: 1.5;
             text-align: justify;
         }
 
-        /* Portfolio */
+        /* Portfolio - Generous top spacing before Our Projects */
         .portfolio-section {
             background: #060606;
-            border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 10px;
-            padding-bottom: 12px;
+            border-top: 1px solid rgba(191, 149, 63, 0.12);
+            padding-top: 50px;
+            padding-bottom: 35px;
         }
 
         .portfolio-card {
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(191, 149, 63, 0.3);
-            border-radius: 12px;
-            padding: 16px 16px;
+            border-radius: 14px;
+            padding: 28px 22px;
             max-width: 900px;
             margin: 0 auto;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
             text-align: center;
+            margin-top: 10px;
         }
 
         .portfolio-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.45rem;
             color: #fcf6ba;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
             font-family: 'Cinzel', serif;
             text-align: center;
         }
 
         .portfolio-card p {
             color: #b0b0b0;
-            font-size: 0.88rem;
-            line-height: 1.45;
-            margin-bottom: 10px;
+            font-size: 0.94rem;
+            line-height: 1.6;
+            margin-bottom: 18px;
             text-align: justify;
         }
 
         .portfolio-screenshots {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            padding: 5px 0;
-            margin-top: 8px;
+            padding: 10px 0;
+            margin-top: 15px;
             scrollbar-width: thin;
             scrollbar-color: #bf953f #111;
         }
 
         .portfolio-screenshots::-webkit-scrollbar {
-            height: 4px;
+            height: 6px;
         }
 
         .portfolio-screenshots::-webkit-scrollbar-track {
@@ -483,8 +488,8 @@
             scroll-snap-align: center;
             background: #111;
             border: 1px solid rgba(191, 149, 63, 0.3);
-            border-radius: 10px;
-            padding: 8px;
+            border-radius: 12px;
+            padding: 12px;
             text-align: center;
             cursor: pointer;
             transition: border-color 0.3s;
@@ -496,15 +501,15 @@
 
         .screenshot-box img {
             width: 100%;
-            max-height: 250px;
+            max-height: 300px;
             object-fit: contain;
-            border-radius: 6px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.6);
-            margin-bottom: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            margin-bottom: 8px;
         }
 
         .screenshot-box span {
-            font-size: 0.78rem;
+            font-size: 0.85rem;
             color: #bf953f;
             font-weight: 600;
             display: block;
@@ -551,52 +556,53 @@
         /* Contact */
         .contact-section {
             background: #030303;
-            border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 10px;
-            padding-bottom: 6px;
+            border-top: 1px solid rgba(191, 149, 63, 0.12);
+            padding-top: 50px;
+            padding-bottom: 25px;
         }
 
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 20px;
             max-width: 1000px;
             margin: 0 auto;
             background: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(191, 149, 63, 0.25);
-            border-radius: 12px;
-            padding: 16px 16px;
+            border-radius: 14px;
+            padding: 25px 20px;
             backdrop-filter: blur(10px);
+            margin-top: 10px;
         }
 
         .contact-info h3 {
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             color: #fcf6ba;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-family: 'Cinzel', serif;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 8px;
-            margin-bottom: 10px;
+            gap: 10px;
+            margin-bottom: 15px;
         }
 
         .contact-item i {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             color: #bf953f;
             margin-top: 3px;
         }
 
         .contact-item div h4 {
-            font-size: 0.82rem;
+            font-size: 0.9rem;
             color: #ffffff;
             margin-bottom: 2px;
         }
 
         .contact-item div p, .contact-item div a {
-            font-size: 0.82rem;
+            font-size: 0.88rem;
             color: #b0b0b0;
             text-decoration: none;
             transition: color 0.3s;
@@ -609,15 +615,15 @@
         .whatsapp-btn-direct {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             background: #25d366;
             color: #ffffff;
-            padding: 6px 14px;
-            border-radius: 20px;
+            padding: 8px 18px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.8rem;
-            margin-top: 3px;
+            font-size: 0.85rem;
+            margin-top: 5px;
             transition: transform 0.3s, background 0.3s;
             box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
         }
@@ -630,8 +636,8 @@
         .map-box {
             width: 100%;
             height: 100%;
-            min-height: 200px;
-            border-radius: 8px;
+            min-height: 240px;
+            border-radius: 10px;
             overflow: hidden;
             border: 1px solid rgba(191, 149, 63, 0.3);
         }
@@ -645,12 +651,12 @@
 
         footer {
             text-align: center;
-            padding: 6px 20px;
+            padding: 15px 20px;
             background: #020202;
             color: #737373;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             border-top: none;
-            margin-top: 4px;
+            margin-top: 15px;
         }
 
         @media (max-width: 768px) {
@@ -658,10 +664,10 @@
                 grid-template-columns: 1fr;
             }
             header {
-                padding: 6px 12px;
+                padding: 10px 15px;
             }
-            .hero h1 { font-size: 1.55rem; }
-            .section-title { font-size: 1.3rem; }
+            .hero h1 { font-size: 1.85rem; }
+            .section-title { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -722,14 +728,14 @@
             </div>
         </header>
 
-        <!-- Hero Section - Extremely reduced top and bottom padding -->
+        <!-- Hero Section with balanced, pleasant top gap below header -->
         <section class="hero" id="home">
             <h1 id="hero-title" class="empower-title">empowering small medium enterprise with <span>digitalization & automation</span></h1>
             <p id="hero-desc">We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
             <a href="#services" class="cta-btn" id="hero-btn">Explore Our Services</a>
         </section>
 
-        <!-- About Us Section -->
+        <!-- About Us Section with ideal gap after Explore Our Services -->
         <section class="section about-section" id="about">
             <h2 class="section-title" id="about-heading">About <span>Us</span></h2>
             <div class="about-card">
@@ -738,7 +744,7 @@
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Services Section with proper gap above Our Core Services -->
         <section class="section services-section" id="services">
             <h2 class="section-title" id="services-heading">Our Core <span>Services</span></h2>
             <div class="services-grid">
@@ -760,7 +766,7 @@
             </div>
         </section>
 
-        <!-- Portfolio Section -->
+        <!-- Portfolio Section with proper gap above Our Projects -->
         <section class="section portfolio-section" id="portfolio">
             <h2 class="section-title" id="portfolio-heading">Our <span>Projects</span></h2>
             <div class="portfolio-card">
@@ -825,9 +831,9 @@
                         </div>
                     </div>
 
-                    <div style="margin-top: 3px;">
+                    <div style="margin-top: 8px;">
                         <a href="https://wa.me/60149674813" target="_blank" class="whatsapp-btn-direct">
-                            <i class="fab fa-whatsapp" style="font-size: 1.05rem; margin-top:0;"></i> Chat on WhatsApp
+                            <i class="fab fa-whatsapp" style="font-size: 1.1rem; margin-top:0;"></i> Chat on WhatsApp
                         </a>
                     </div>
                 </div>
@@ -973,7 +979,7 @@
             document.getElementById('serv-3-desc').innerText = t.serv3Desc;
             document.getElementById('portfolio-heading').innerHTML = t.portfolioHeading;
             document.getElementById('proj-title').innerText = t.projTitle;
-            document.getElementById('proj-desc').innerText = t.projDesc;
+            document.getElementById('proj-desc').innerText, t.projDesc;
             document.getElementById('contact-heading').innerHTML = t.contactHeading;
             document.getElementById('contact-sub').innerText = t.contactSub;
             document.getElementById('addr-label').innerText = t.addrLabel;
