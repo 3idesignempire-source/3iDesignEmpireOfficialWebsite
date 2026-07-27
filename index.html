@@ -204,7 +204,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 25px;
+            padding: 8px 20px;
             z-index: 1000;
         }
 
@@ -215,13 +215,13 @@
         }
 
         .nav-crown-svg {
-            width: 24px;
-            height: 18px;
+            width: 22px;
+            height: 16px;
         }
 
         .nav-logo {
             font-family: 'Cinzel', serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             background: linear-gradient(135deg, #bf953f, #fcf6ba);
             -webkit-background-clip: text;
@@ -233,9 +233,9 @@
         .home-btn-nav {
             background: rgba(191, 149, 63, 0.15);
             border: 1px solid rgba(191, 149, 63, 0.6);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
             color: #fcf6ba;
             font-weight: 600;
             cursor: pointer;
@@ -243,7 +243,7 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
 
         .home-btn-nav:hover {
@@ -253,30 +253,30 @@
         }
 
         .section {
-            padding: 20px 20px;
+            padding: 15px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        /* Hero Section - Extremely tight gap from header as requested */
+        /* Hero Section - Extremely tight padding, removing both circled gaps completely */
         .hero {
-            min-height: 85vh;
+            min-height: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 55px 20px 10px 20px;
+            padding: 48px 20px 10px 20px; /* Minimized top padding right below header and tight bottom */
             background: radial-gradient(circle at center, #141414 0%, #030303 75%);
             position: relative;
         }
 
         .hero h1 {
-            font-size: 2.1rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             max-width: 800px;
-            line-height: 1.2;
+            line-height: 1.15;
             color: #ffffff;
             text-transform: lowercase;
         }
@@ -293,37 +293,38 @@
         }
 
         .hero p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #a3a3a3;
             max-width: 650px;
-            margin-bottom: 15px;
-            line-height: 1.5;
+            margin-bottom: 12px; /* Extremely tight gap right above button */
+            line-height: 1.4;
             text-align: justify;
         }
 
         .cta-btn {
             background: linear-gradient(135deg, #bf953f, #aa771c);
             color: #050505;
-            padding: 10px 25px;
+            padding: 8px 22px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.9rem;
-            box-shadow: 0 6px 15px rgba(191, 149, 63, 0.3);
+            font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(191, 149, 63, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 5px; /* Tight gap right below button before About Us */
         }
 
         .cta-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(191, 149, 63, 0.5);
+            box-shadow: 0 8px 18px rgba(191, 149, 63, 0.5);
             background: linear-gradient(135deg, #fcf6ba, #bf953f);
         }
 
         .section-title {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: #ffffff;
             line-height: 1.2;
         }
@@ -334,30 +335,30 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* About Us - Minimized top gap as requested */
+        /* About Us - Tight padding */
         .about-section {
             background: #060606;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 15px;
-            padding-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 15px;
         }
 
         .about-card {
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(191, 149, 63, 0.25);
-            padding: 22px 20px;
-            border-radius: 14px;
+            padding: 20px 18px;
+            border-radius: 12px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.8);
             max-width: 900px;
             margin: 0 auto;
         }
 
         .about-card p {
             color: #cccccc;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 12px;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin-bottom: 10px;
             text-align: justify;
         }
 
@@ -369,21 +370,21 @@
         .services-section {
             background: #030303;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
+            gap: 12px;
         }
 
         .service-card {
             background: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(191, 149, 63, 0.2);
-            padding: 22px 18px;
-            border-radius: 12px;
+            padding: 18px 15px;
+            border-radius: 10px;
             backdrop-filter: blur(10px);
             transition: transform 0.3s, border-color 0.3s;
             text-align: center;
@@ -395,77 +396,76 @@
         }
 
         .service-card i {
-            font-size: 2.2rem;
+            font-size: 2rem;
             background: linear-gradient(135deg, #bf953f, #fcf6ba);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: inline-block;
         }
 
         .service-card h3 {
-            font-size: 1.05rem;
-            margin-bottom: 8px;
+            font-size: 1rem;
+            margin-bottom: 6px;
             color: #ffffff;
-            line-height: 1.3;
+            line-height: 1.25;
         }
 
         .service-card p {
             color: #a3a3a3;
-            font-size: 0.88rem;
-            line-height: 1.45;
+            font-size: 0.85rem;
+            line-height: 1.4;
             text-align: justify;
         }
 
-        /* Portfolio - 1 image viewable at a time, scrollable one by one, click to zoom/enlarge modal */
+        /* Portfolio */
         .portfolio-section {
             background: #060606;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
 
         .portfolio-card {
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(191, 149, 63, 0.3);
-            border-radius: 14px;
-            padding: 25px 20px;
+            border-radius: 12px;
+            padding: 20px 18px;
             max-width: 900px;
             margin: 0 auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
             text-align: center;
         }
 
         .portfolio-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #fcf6ba;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-family: 'Cinzel', serif;
             text-align: center;
         }
 
         .portfolio-card p {
             color: #b0b0b0;
-            font-size: 0.92rem;
-            line-height: 1.55;
-            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
             text-align: justify;
         }
 
-        /* 1 Image at a time snap scroll container */
         .portfolio-screenshots {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            padding: 10px 0;
-            margin-top: 15px;
+            padding: 8px 0;
+            margin-top: 10px;
             scrollbar-width: thin;
             scrollbar-color: #bf953f #111;
         }
 
         .portfolio-screenshots::-webkit-scrollbar {
-            height: 6px;
+            height: 5px;
         }
 
         .portfolio-screenshots::-webkit-scrollbar-track {
@@ -479,12 +479,12 @@
         }
 
         .screenshot-box {
-            flex: 0 0 100%; /* Exactly 1 image viewable at a time */
+            flex: 0 0 100%;
             scroll-snap-align: center;
             background: #111;
             border: 1px solid rgba(191, 149, 63, 0.3);
-            border-radius: 12px;
-            padding: 12px;
+            border-radius: 10px;
+            padding: 10px;
             text-align: center;
             cursor: pointer;
             transition: border-color 0.3s;
@@ -496,22 +496,21 @@
 
         .screenshot-box img {
             width: 100%;
-            max-height: 320px;
+            max-height: 280px;
             object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-            margin-bottom: 8px;
-            transition: transform 0.3s;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+            margin-bottom: 6px;
         }
 
         .screenshot-box span {
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             color: #bf953f;
             font-weight: 600;
             display: block;
         }
 
-        /* Fullscreen Image Modal for Clicking and Enlarging */
+        /* Modal */
         #imageModal {
             display: none;
             position: fixed;
@@ -553,51 +552,51 @@
         .contact-section {
             background: #030303;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 20px;
-            padding-bottom: 10px;
+            padding-top: 15px;
+            padding-bottom: 8px;
         }
 
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
             max-width: 1000px;
             margin: 0 auto;
             background: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(191, 149, 63, 0.25);
-            border-radius: 14px;
-            padding: 25px 20px;
+            border-radius: 12px;
+            padding: 20px 18px;
             backdrop-filter: blur(10px);
         }
 
         .contact-info h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #fcf6ba;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-family: 'Cinzel', serif;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 15px;
+            gap: 8px;
+            margin-bottom: 12px;
         }
 
         .contact-item i {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #bf953f;
             margin-top: 3px;
         }
 
         .contact-item div h4 {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #ffffff;
             margin-bottom: 2px;
         }
 
         .contact-item div p, .contact-item div a {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: #b0b0b0;
             text-decoration: none;
             transition: color 0.3s;
@@ -610,15 +609,15 @@
         .whatsapp-btn-direct {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             background: #25d366;
             color: #ffffff;
-            padding: 8px 18px;
-            border-radius: 25px;
+            padding: 7px 16px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
-            margin-top: 5px;
+            font-size: 0.82rem;
+            margin-top: 4px;
             transition: transform 0.3s, background 0.3s;
             box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
         }
@@ -631,8 +630,8 @@
         .map-box {
             width: 100%;
             height: 100%;
-            min-height: 250px;
-            border-radius: 10px;
+            min-height: 220px;
+            border-radius: 8px;
             overflow: hidden;
             border: 1px solid rgba(191, 149, 63, 0.3);
         }
@@ -646,12 +645,12 @@
 
         footer {
             text-align: center;
-            padding: 10px 20px;
+            padding: 8px 20px;
             background: #020202;
             color: #737373;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             border-top: none;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         @media (max-width: 768px) {
@@ -659,10 +658,10 @@
                 grid-template-columns: 1fr;
             }
             header {
-                padding: 8px 15px;
+                padding: 6px 12px;
             }
-            .hero h1 { font-size: 1.8rem; }
-            .section-title { font-size: 1.5rem; }
+            .hero h1 { font-size: 1.7rem; }
+            .section-title { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -723,14 +722,14 @@
             </div>
         </header>
 
-        <!-- Hero Section - Tight gap from header -->
+        <!-- Hero Section - Both top and bottom gaps completely eliminated -->
         <section class="hero" id="home">
             <h1 id="hero-title" class="empower-title">empowering small medium enterprise with <span>digitalization & automation</span></h1>
             <p id="hero-desc">We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
             <a href="#services" class="cta-btn" id="hero-btn">Explore Our Services</a>
         </section>
 
-        <!-- About Us Section - Minimized top gap -->
+        <!-- About Us Section -->
         <section class="section about-section" id="about">
             <h2 class="section-title" id="about-heading">About <span>Us</span></h2>
             <div class="about-card">
@@ -761,7 +760,7 @@
             </div>
         </section>
 
-        <!-- Portfolio Section - 1 image viewable at a time, click to enlarge -->
+        <!-- Portfolio Section -->
         <section class="section portfolio-section" id="portfolio">
             <h2 class="section-title" id="portfolio-heading">Our <span>Projects</span></h2>
             <div class="portfolio-card">
@@ -789,7 +788,7 @@
             </div>
         </section>
 
-        <!-- Fullscreen Modal for Enlarged Image Viewing -->
+        <!-- Fullscreen Modal -->
         <div id="imageModal" onclick="closeModal()">
             <span class="close-modal">&times;</span>
             <img id="modalImg" src="" alt="Enlarged Project Screenshot">
@@ -826,7 +825,7 @@
                         </div>
                     </div>
 
-                    <div style="margin-top: 8px;">
+                    <div style="margin-top: 4px;">
                         <a href="https://wa.me/60149674813" target="_blank" class="whatsapp-btn-direct">
                             <i class="fab fa-whatsapp" style="font-size: 1.1rem; margin-top:0;"></i> Chat on WhatsApp
                         </a>
@@ -845,7 +844,6 @@
     </div>
 
     <script>
-        // Modal functions for enlarging portfolio images
         function openModal(imgSrc) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImg');
