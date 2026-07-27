@@ -260,7 +260,7 @@
             margin: 0 auto;
         }
 
-        /* Hero Section - Reduced top gap from header & single-line title */
+        /* Hero Section - Reduced top gap & exact title formatting */
         .hero {
             min-height: 80vh;
             display: flex;
@@ -268,27 +268,28 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 85px 20px 30px 20px;
+            padding: 75px 20px 30px 20px;
             background: radial-gradient(circle at center, #141414 0%, #030303 75%);
             position: relative;
         }
 
         .hero h1 {
-            font-size: 1.9rem;
+            font-size: 1.65rem;
             font-weight: 700;
-            margin-bottom: 14px;
-            max-width: 950px;
-            line-height: 1.25;
+            margin-bottom: 12px;
+            max-width: 1100px;
+            line-height: 1.3;
             color: #ffffff;
-            text-transform: lowercase;
-            white-space: nowrap; /* Ensures single line as requested */
+            white-space: nowrap; /* Forces exact single line */
         }
 
+        /* Capital D & Capital E for Digitalization & Automation */
         .hero h1 span {
             background: linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: none;
+            font-weight: 800;
         }
 
         .empower-title::first-letter {
@@ -299,25 +300,25 @@
             font-size: 0.95rem;
             color: #b0b0b0;
             max-width: 680px;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
             line-height: 1.5;
             text-align: justify;
         }
 
-        /* Action Buttons Row (Explore Our Services, About Us, Our Projects, Contact Us) */
+        /* Action Buttons Row directly side-by-side as requested */
         .hero-action-buttons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
             margin-top: 5px;
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .action-chip-btn {
             background: linear-gradient(135deg, #bf953f, #aa771c);
             color: #050505;
-            padding: 10px 22px;
+            padding: 10px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
@@ -327,6 +328,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            white-space: nowrap;
         }
 
         .action-chip-btn:hover {
@@ -672,10 +674,10 @@
             margin-top: 15px;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
             .hero h1 {
                 font-size: 1.35rem;
-                white-space: normal; /* Allow wrapping on smaller screens/mobile */
+                white-space: normal; /* Allow wrap gracefully on smaller laptops/tablets if needed */
             }
         }
 
@@ -687,7 +689,7 @@
                 padding: 10px 15px;
             }
             .hero h1 { 
-                font-size: 1.25rem; 
+                font-size: 1.2rem; 
                 white-space: normal;
             }
             .section-title { font-size: 1.5rem; }
@@ -728,7 +730,7 @@
             <div class="logo-container">
                 <div class="logo-3d">3i DESIGN EMPIRE</div>
             </div>
-            <div class="splash-subtitle" id="splash-subtitle-text">empowering small medium enterprise with digitalization & automation solutions</div>
+            <div class="splash-subtitle" id="splash-subtitle-text">Empowering Small Medium Enterprise with Digitalization & Automation Solutions</div>
             
             <div class="lang-selector-box">
                 <h3 id="lang-box-title">Please Select Your Preferred Language</h3>
@@ -760,12 +762,12 @@
             </div>
         </header>
 
-        <!-- Hero Section with single-line title and navigation action buttons row -->
+        <!-- Hero Section with exact single-line title & Capital D/E for Digitalization & Automation -->
         <section class="hero" id="home">
-            <h1 id="hero-title" class="empower-title">empowering small medium enterprise with <span>digitalization & automation</span></h1>
+            <h1 id="hero-title" class="empower-title">Empowering Small Medium Enterprise with <span>Digitalization & Automation</span></h1>
             <p id="hero-desc">We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
             
-            <!-- Navigation Action Buttons Row -->
+            <!-- Side-by-side Navigation Action Buttons Row -->
             <div class="hero-action-buttons">
                 <a href="#services" class="action-chip-btn" id="btn-services"><i class="fas fa-cogs"></i> Explore Our Services</a>
                 <a href="#about" class="action-chip-btn" id="btn-about"><i class="fas fa-info-circle"></i> About Us</a>
@@ -903,7 +905,7 @@
 
         const translations = {
             en: {
-                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
+                heroTitle: "Empowering Small Medium Enterprise with <span>Digitalization & Automation</span>",
                 heroDesc: "We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.",
                 btnServices: "Explore Our Services",
                 btnAbout: "About Us",
@@ -930,7 +932,7 @@
                 footer: "© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Small Medium Enterprises (SME) & Professionals."
             },
             ms: {
-                heroTitle: "memperkasakan perusahaan kecil sederhana dengan <span>pendigitalan & automasi</span>",
+                heroTitle: "Empowering Small Medium Enterprise with <span>Digitalization & Automation</span>",
                 heroDesc: "Kami mengubah operasi tradisional perusahaan kecil sederhana kepada sistem digital pintar, automatik dan berprestasi tinggi untuk perniagaan anda.",
                 btnServices: "Teroka Perkhidmatan",
                 btnAbout: "Tentang Kami",
@@ -957,7 +959,7 @@
                 footer: "© 2026 3i DESIGN EMPIRE. Hak Cipta Terpelihara. Melayani Small Medium Enterprises (SME) & Profesional."
             },
             ta: {
-                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
+                heroTitle: "Empowering Small Medium Enterprise with <span>Digitalization & Automation</span>",
                 heroDesc: "பாரம்பரிய small medium enterprise முறைகளை மாற்றி, ஆட்டோமேஷன் மற்றும் டிஜிட்டல் கிளவுட் சிஸ்டம் மூலம் உங்கள் வியாபார வளர்ச்சியை பெருக்குகிறோம்.",
                 btnServices: "சேவைகளைக் காண்க",
                 btnAbout: "எங்களைப் பற்றி",
@@ -984,7 +986,7 @@
                 footer: "© 2026 3i DESIGN EMPIRE. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. Small Medium Enterprises (SME)-களுக்கு சேவை."
             },
             zh: {
-                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
+                heroTitle: "Empowering Small Medium Enterprise with <span>Digitalization & Automation</span>",
                 heroDesc: "我们将传统 small medium enterprise 运营转化为专为您的业务增长量身定制的智能、自动化和高性能数字系统。",
                 btnServices: "探索服务",
                 btnAbout: "关于我们",
@@ -1000,7 +1002,7 @@
                 serv2Desc: "将手动工作流程和重复性任务转换为流畅、自动化的数字云端工作流。",
                 serv3Title: "IT 支持与维护",
                 serv3Desc: "可靠的兼职应用支持、漏洞修复和持续的系统维护，确保顺畅运行。",
-                portfolioHeading: "我们的 <span>项目</span>",
+                portfolioHeading: "Our <span>Projects</span>",
                 projTitle: "Personal Trainer Log System",
                 projDesc: "专为私人教练设计的全面且对移动端友好的数字锻炼追踪与健身管理系统。",
                 contactHeading: "Contact <span>Us</span>",
@@ -1020,7 +1022,7 @@
             document.getElementById('btn-services').innerHTML = `<i class="fas fa-cogs"></i> ${t.btnServices}`;
             document.getElementById('btn-about').innerHTML = `<i class="fas fa-info-circle"></i> ${t.btnAbout}`;
             document.getElementById('btn-projects').innerHTML = `<i class="fas fa-project-diagram"></i> ${t.btnProjects}`;
-            document.getElementById('btn-contact').innerHTML = `<ctrl61><i class="fas fa-envelope"></i> ${t.btnContact}`;
+            document.getElementById('btn-contact').innerHTML = `<i class="fas fa-envelope"></i> ${t.btnContact}`;
             document.getElementById('about-heading').innerHTML = t.aboutHeading;
             document.getElementById('about-text-1').innerText = t.aboutText1;
             document.getElementById('about-text-2').innerText = t.aboutText2;
