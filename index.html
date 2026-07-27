@@ -260,7 +260,7 @@
             margin: 0 auto;
         }
 
-        /* Hero Section Rollbacked to Original + 2-Row Grid Buttons */
+        /* Hero Section with Exact Multi-line Reporting Structure & Two-Row Buttons */
         .hero {
             min-height: 85vh;
             display: flex;
@@ -273,26 +273,30 @@
             position: relative;
         }
 
-        .hero h1 {
-            font-size: 2.1rem;
-            font-weight: 700;
-            margin-bottom: 14px;
-            max-width: 900px;
-            line-height: 1.25;
+        .hero-line-1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 10px;
             color: #ffffff;
-            text-transform: lowercase;
+            line-height: 1.3;
+            max-width: 800px;
+            text-transform: none;
         }
 
-        .hero h1 span {
-            background: linear-gradient(135deg, #bf953f, #fcf6ba, #aa771c);
+        .hero-line-2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.25;
+            text-transform: none;
+        }
+
+        .hero-line-2 span {
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 40%, #aa771c 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-transform: none;
             font-weight: 800;
-        }
-
-        .empower-title::first-letter {
-            text-transform: uppercase;
+            filter: drop-shadow(0 2px 10px rgba(191, 149, 63, 0.4));
         }
 
         .hero p {
@@ -682,7 +686,8 @@
             header {
                 padding: 10px 15px;
             }
-            .hero h1 { font-size: 1.5rem; }
+            .hero-line-1 { font-size: 1.25rem; }
+            .hero-line-2 { font-size: 1.6rem; }
             .section-title { font-size: 1.5rem; }
             .hero-action-buttons {
                 grid-template-columns: 1fr;
@@ -716,7 +721,7 @@
             <div class="logo-container">
                 <div class="logo-3d">3i DESIGN EMPIRE</div>
             </div>
-            <div class="splash-subtitle" id="splash-subtitle-text">empowering small medium enterprise with digitalization & automation solutions</div>
+            <div class="splash-subtitle" id="splash-subtitle-text">Empowering small medium enterprise<br>Digitalization & Automation</div>
             
             <div class="lang-selector-box">
                 <h3 id="lang-box-title">Please Select Your Preferred Language</h3>
@@ -748,12 +753,13 @@
             </div>
         </header>
 
-        <!-- Hero Section Rollbacked to Original + 2-Row Grid Buttons -->
+        <!-- Hero Section with exact reporting line and 2-row buttons -->
         <section class="hero" id="home">
-            <h1 id="hero-title" class="empower-title">empowering small medium enterprise with <span>digitalization & automation</span></h1>
-            <p id="hero-desc">We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
+            <div class="hero-line-1" id="hero-line-1">Empowering small medium enterprise</div>
+            <div class="hero-line-2" id="hero-line-2"><span>Digitalization & Automation</span></div>
+            <p id="hero-desc">We transform traditional operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
             
-            <!-- Two-Row Grid Buttons Layout (2 buttons per row, 2 rows total) -->
+            <!-- Two-Row Grid Buttons Layout: Explore Our Services, About Us, Our Projects, Contact Us (2 per row) -->
             <div class="hero-action-buttons">
                 <a href="#services" class="action-chip-btn" id="btn-services"><i class="fas fa-cogs"></i> Explore Our Services</a>
                 <a href="#about" class="action-chip-btn" id="btn-about"><i class="fas fa-info-circle"></i> About Us</a>
@@ -778,7 +784,7 @@
                 <div class="service-card">
                     <i class="fas fa-laptop-code"></i>
                     <h3 id="serv-1-title">Custom Web & Mobile Application Development</h3>
-                    <p id="serv-1-desc">Modern, responsive, and high-speed web platforms and custom business systems built for small medium enterprise.</p>
+                    <p id="serv-1-desc">Modern, responsive, and high-speed web platforms and custom business systems built for enterprises.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-cogs"></i>
@@ -872,7 +878,7 @@
         </section>
 
         <footer>
-            <p id="footer-text">© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Small Medium Enterprises (SME) & Professionals.</p>
+            <p id="footer-text">© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Enterprises & Professionals.</p>
         </footer>
     </div>
 
@@ -891,8 +897,9 @@
 
         const translations = {
             en: {
-                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
-                heroDesc: "We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.",
+                heroLine1: "Empowering small medium enterprise",
+                heroLine2: "Digitalization & Automation",
+                heroDesc: "We transform traditional operations into smart, automated, and high-performance digital systems tailored for your business growth.",
                 btnServices: "Explore Our Services",
                 btnAbout: "About Us",
                 btnProjects: "Our Projects",
@@ -902,7 +909,7 @@
                 aboutText2: "We believe every local enterprise deserves top-tier digital systems, automated workflows, and high-performance custom applications to thrive in today's competitive landscape. Our commitment is to empower your business growth through cutting-edge technology delivered with precision and excellence.",
                 servicesHeading: "Our Core <span>Services</span>",
                 serv1Title: "Custom Web & Mobile Application Development",
-                serv1Desc: "Modern, responsive, and high-speed web platforms and custom business systems built for small medium enterprise.",
+                serv1Desc: "Modern, responsive, and high-speed web platforms and custom business systems built for enterprises.",
                 serv2Title: "Business Digitalization & Automation",
                 serv2Desc: "Convert manual workflows, paper records, and repetitive tasks into sleek, automated cloud workflows.",
                 serv3Title: "IT Support & Maintenance",
@@ -915,80 +922,83 @@
                 addrLabel: "Address",
                 phoneLabel: "Contact No / WhatsApp",
                 emailLabel: "Email Address",
-                footer: "© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Small Medium Enterprises (SME) & Professionals."
+                footer: "© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Enterprises & Professionals."
             },
             ms: {
-                heroTitle: "memperkasakan perusahaan kecil sederhana dengan <span>pendigitalan & automasi</span>",
-                heroDesc: "Kami mengubah operasi tradisional perusahaan kecil sederhana kepada sistem digital pintar, automatik dan berprestasi tinggi untuk perniagaan anda.",
+                heroLine1: "Memperkasakan perusahaan kecil sederhana",
+                heroLine2: "Digitalization & Automation",
+                heroDesc: "Kami mengubah operasi tradisional kepada sistem digital pintar, automatik dan berprestasi tinggi untuk perniagaan anda.",
                 btnServices: "Teroka Perkhidmatan",
                 btnAbout: "Tentang Kami",
                 btnProjects: "Projek Kami",
                 btnContact: "Hubungi Kami",
                 aboutHeading: "Tentang <span>Kami</span>",
-                aboutText1: "3i Design Empire dibina oleh pasukan IT yang bersemangat dan berpengalaman luas dengan misi jelas: membawa penyelesaian teknologi canggih dan inovasi AI terus kepada perusahaan kecil sederhana tempatan.",
-                aboutText2: "Kami percaya setiap perusahaan tempatan berhak mendapat sistem digital tahap tinggi, aliran kerja automatik, dan aplikasi tersuai berprestasi tinggi untuk berkembang maju. Komitmen kami adalah memperkasakan pertumbuhan perniagaan anda.",
+                aboutText1: "3i Design Empire dibina oleh pasukan IT yang bersemangat dan berpengalaman luas dengan misi jelas: membawa penyelesaian teknologi canggih dan inovasi AI terus kepada perusahaan tempatan.",
+                aboutText2: "Kami percaya setiap perusahaan tempatan berhak mendapat sistem digital tahap tinggi, aliran kerja automatik, dan aplikasi tersuai berprestasi tinggi untuk berkembang maju.",
                 servicesHeading: "Perkhidmatan <span>Utama</span> Kami",
                 serv1Title: "Pembangunan Web & Aplikasi Mudah Alih",
-                serv1Desc: "Platform web moden, responsif dan pantas serta sistem perniagaan tersuai untuk perusahaan kecil sederhana.",
+                serv1Desc: "Platform web moden, responsif dan pantas serta sistem perniagaan tersuai.",
                 serv2Title: "Pendigitalan & Automasi Perniagaan",
                 serv2Desc: "Menukar aliran kerja manual dan tugas berulang kepada sistem awan automatik yang lancar.",
                 serv3Title: "Sokongan & Penyelenggaraan IT",
                 serv3Desc: "Sokongan aplikasi sambilan yang boleh dipercayai, pembetulan pepijat, dan penyelenggaraan sistem.",
                 portfolioHeading: "Projek <span>Kami</span>",
                 projTitle: "Personal Trainer Log System",
-                projDesc: "Sistem pengurusan gim dan penjejakan senaman digital mesra mudah alih yang komprehensif untuk jurulatih peribadi menguruskan pelatih dan program.",
+                projDesc: "Sistem pengurusan gim dan penjejakan senaman digital mesra mudah alih yang komprehensif untuk jurulatih peribadi.",
                 contactHeading: "Hubungi <span>Kami</span>",
                 contactSub: "Hubungi Kami",
                 addrLabel: "Alamat",
                 phoneLabel: "No. Telefon / WhatsApp",
                 emailLabel: "Alamat E-mel",
-                footer: "© 2026 3i DESIGN EMPIRE. Hak Cipta Terpelihara. Melayani Small Medium Enterprises (SME) & Profesional."
+                footer: "© 2026 3i DESIGN EMPIRE. Hak Cipta Terpelihara."
             },
             ta: {
-                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
-                heroDesc: "பாரம்பரிய small medium enterprise முறைகளை மாற்றி, ஆட்டோமேஷன் மற்றும் டிஜிட்டல் கிளவுட் சிஸ்டம் மூலம் உங்கள் வியாபார வளர்ச்சியை பெருக்குகிறோம்.",
-                btnServices: "சேவைகளைக் காண்க",
-                btnAbout: "எங்களைப் பற்றி",
-                btnProjects: "திட்டங்கள்",
-                btnContact: "தொடர்பு",
+                heroLine1: "Empowering small medium enterprise",
+                heroLine2: "Digitalization & Automation",
+                heroDesc: "பாரம்பரிய முறைகளை மாற்றி, ஆட்டோமேஷன் மற்றும் டிஜிட்டல் கிளவுட் சிஸ்டம் மூலம் உங்கள் வியாபார வளர்ச்சியை பெருக்குகிறோம்.",
+                btnServices: "Explore Our Services",
+                btnAbout: "About Us",
+                btnProjects: "Our Projects",
+                btnContact: "Contact Us",
                 aboutHeading: "எங்களைப் <span>பற்றி</span>",
-                aboutText1: "3i Design Empire என்பது அனுபவம் வாய்ந்த IT நிபுணர்களால் உருவாக்கப்பட்டது. உள்ளூர் small medium enterprise மற்றும் வணிகங்களுக்கு அதிநவீன தொழில்நுட்ப தீர்வுகள் மற்றும் AI-அடிப்படையிலான சேவைகளை வழங்குவதே எங்கள் லட்சியம்.",
-                aboutText2: "ஒவ்வொரு வணிகமும் சிறந்த டிஜிட்டல் முறைகள் மற்றும் ஆட்டோமேஷன் தீர்வுகளைப் பெற வேண்டும் என்பதே எங்கள் நோக்கம். நவீன தொழில்நுட்பத்தின் மூலம் உங்கள் வியாபார வளர்ச்சியை மேம்படுத்துகிறோம்.",
+                aboutText1: "3i Design Empire என்பது அனுபவம் வாய்ந்த IT நிபுணர்களால் உருவாக்கப்பட்டது. உள்ளூர் வணிகங்களுக்கு அதிநவீன தொழில்நுட்ப தீர்வுகள் மற்றும் சேவைகளை வழங்குவதே எங்கள் லட்சியம்.",
+                aboutText2: "ஒவ்வொரு வணிகமும் சிறந்த டிஜிட்டல் முறைகள் மற்றும் ஆட்டோமேஷன் தீர்வுகளைப் பெற வேண்டும் என்பதே எங்கள் நோக்கம்.",
                 servicesHeading: "எங்கள் முக்கிய <span>சேவைகள்</span>",
                 serv1Title: "வெப்சைட் & மொபைல் ஆப் டெவலப்மென்ட்",
-                serv1Desc: "Small medium enterprise-களுக்குத் தேவையான அதிநவீன, துரிதமான வெப்சைட்டுகள் மற்றும் கஸ்டம் பிசினஸ் சிஸ்டம்ஸ்.",
+                serv1Desc: "அதிநவீன, துரிதமான வெப்சைட்டுகள் மற்றும் கஸ்டம் பிசினஸ் சிஸ்டம்ஸ்.",
                 serv2Title: "பிசினஸ் டிஜிட்டலைசேஷன் & ஆட்டோமேஷன்",
-                serv2Desc: "மேனுவல் ஒர்க்குகள் மற்றும் ரிப்பீட்டிவ் டாஸ்க்குகளை நேர்த்தியான, ஆட்டோமேட்டட் கிளவுட் ஒர்க்ஃப்ளோவாக மாற்றுதல்.",
+                serv2Desc: "மேனுவல் ஒர்க்குகள் மற்றும் ரிப்பீட்டிவ் டாஸ்க்குகளை நேர்த்தியான கிளவுட் ஒர்க்ஃப்ளோவாக மாற்றுதல்.",
                 serv3Title: "ஐடி சப்போர்ட் & மெயின்டனன்ஸ்",
-                serv3Desc: "நம்பகமான பார்ட்-டைம் அப்ளிகேஷன் சப்போர்ட், பக் ஃபிக்சிங் மற்றும் சிஸ்டம் மெயின்டனன்ஸ் சேவைகள்.",
+                serv3Desc: "நம்பகமான பார்ட்-டைம் அப்ளிகேஷன் சப்போர்ட் மற்றும் சிஸ்டம் மெயின்டனன்ஸ் சேவைகள்.",
                 portfolioHeading: "எங்கள் <span>திட்டங்கள்</span>",
                 projTitle: "Personal Trainer Log System",
-                projDesc: "பர்சனல் ட்ரெய்னர்கள் தங்கள் ட்ரெய்னிகளை நிர்வகிக்கவும், ஒர்க்அவுட் புரோகிராம்களை உருவாக்கவும், ஃபிட்னஸ் லோக்குகளைக் கண்காணிக்கவும் உருவாக்கப்பட்ட பிரத்யேக சிஸ்டம்.",
+                projDesc: "பர்சனல் ட்ரெய்னர்கள் தங்கள் ட்ரெய்னிகளை நிர்வகிக்கவும், ஃபிட்னஸ் லோக்குகளைக் கண்காணிக்கவும் உருவாக்கப்பட்ட பிரத்யேக சிஸ்டம்.",
                 contactHeading: "தொடர்பு <span>கொள்ள</span>",
                 contactSub: "எங்களைத் தொடர்பு கொள்ள",
                 addrLabel: "முகவரி",
                 phoneLabel: "தொலைபேசி எண் / WhatsApp",
                 emailLabel: "மின்னஞ்சல் முகவரி",
-                footer: "© 2026 3i DESIGN EMPIRE. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. Small Medium Enterprises (SME)-களுக்கு சேவை."
+                footer: "© 2026 3i DESIGN EMPIRE. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
             },
             zh: {
-                heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
-                heroDesc: "我们将传统 small medium enterprise 运营转化为专为您的业务增长量身定制的智能、自动化和高性能数字系统。",
-                btnServices: "探索服务",
-                btnAbout: "关于我们",
-                btnProjects: "项目展示",
-                btnContact: "联系我们",
+                heroLine1: "Empowering small medium enterprise",
+                heroLine2: "Digitalization & Automation",
+                heroDesc: "我们将传统运营转化为专为您的业务增长量身定制的智能、自动化和高性能数字系统。",
+                btnServices: "Explore Our Services",
+                btnAbout: "About Us",
+                btnProjects: "Our Projects",
+                btnContact: "Contact Us",
                 aboutHeading: "关于 <span>我们</span>",
-                aboutText1: "3i Design Empire 由充满激情且经验丰富的 IT 团队创立，旨在将先进的技术解决方案和 AI 驱动的创新直接带给本地 small medium enterprise。",
-                aboutText2: "我们相信每个本地企业都应该拥有顶级的数字系统、自动化工作流程和高性能的定制应用程序。我们的承诺是通过尖端技术赋能您的业务增长。",
+                aboutText1: "3i Design Empire 由充满激情且经验丰富的 IT 团队创立，旨在将先进的技术解决方案直接带给本地企业。",
+                aboutText2: "我们相信每个本地企业都应该拥有顶级的数字系统、自动化工作流程和高性能的定制应用程序。",
                 servicesHeading: "我们的核心 <span>服务</span>",
                 serv1Title: "定制网页与移动应用开发",
-                serv1Desc: "为 small medium enterprise 构建现代、响应式、高速的网页平台和定制化业务系统。",
-                serv2Title: "Business Digitalization & Automation",
+                serv1Desc: "为企业构建现代、响应式、高速的网页平台和定制化业务系统。",
+                serv2Title: "业务数字化与自动化转型",
                 serv2Desc: "将手动工作流程和重复性任务转换为流畅、自动化的数字云端工作流。",
-                serv3Title: "IT Support & Maintenance",
+                serv3Title: "IT 支持与维护",
                 serv3Desc: "可靠的兼职应用支持、漏洞修复和持续的系统维护，确保顺畅运行。",
-                portfolioHeading: "我们的 <span>项目</span>",
+                portfolioHeading: "Our <span>Projects</span>",
                 projTitle: "Personal Trainer Log System",
                 projDesc: "专为私人教练设计的全面且对移动端友好的数字锻炼追踪与健身管理系统。",
                 contactHeading: "Contact <span>Us</span>",
@@ -996,17 +1006,18 @@
                 addrLabel: "Address",
                 phoneLabel: "联系电话 / WhatsApp",
                 emailLabel: "电子邮件",
-                footer: "© 2026 3i DESIGN EMPIRE. 版权所有. 服务于 Small Medium Enterprises (SME) 与专业人士。"
+                footer: "© 2026 3i DESIGN EMPIRE. 版权所有."
             }
         };
 
         function enterSite(lang) {
             const t = translations[lang] || translations.en;
             
-            document.getElementById('hero-title').innerHTML = t.heroTitle;
+            document.getElementById('hero-line-1').innerText = t.heroLine1;
+            document.getElementById('hero-line-2').innerHTML = `<span>${t.heroLine2}</span>`;
             document.getElementById('hero-desc').innerText = t.heroDesc;
             document.getElementById('btn-services').innerHTML = `<i class="fas fa-cogs"></i> ${t.btnServices}`;
-            document.getElementById('btn-about').innerHTML = `<i class="fas fa-info-circle">C</i> ${t.btnAbout}`.replace('C', '');
+            document.getElementById('btn-about').innerHTML = `<i class="fas fa-info-circle"></i> ${t.btnAbout}`;
             document.getElementById('btn-projects').innerHTML = `<i class="fas fa-project-diagram"></i> ${t.btnProjects}`;
             document.getElementById('btn-contact').innerHTML = `<i class="fas fa-envelope"></i> ${t.btnContact}`;
             document.getElementById('about-heading').innerHTML = t.aboutHeading;
