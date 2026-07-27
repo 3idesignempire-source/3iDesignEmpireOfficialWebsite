@@ -252,22 +252,21 @@
             box-shadow: 0 0 15px rgba(191, 149, 63, 0.4);
         }
 
-        /* Sections with reduced gaps as requested */
         .section {
-            padding: 30px 20px;
+            padding: 20px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        /* Hero Section - Moved up closer to header with minimal gap */
+        /* Hero Section - Extremely tight gap from header as requested */
         .hero {
-            min-height: 90vh;
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 70px 20px 20px 20px;
+            padding: 55px 20px 10px 20px;
             background: radial-gradient(circle at center, #141414 0%, #030303 75%);
             position: relative;
         }
@@ -275,7 +274,7 @@
         .hero h1 {
             font-size: 2.1rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             max-width: 800px;
             line-height: 1.2;
             color: #ffffff;
@@ -289,7 +288,6 @@
             text-transform: none;
         }
 
-        /* Capitalize specific letters/words or target first letter E */
         .empower-title::first-letter {
             text-transform: uppercase;
         }
@@ -298,7 +296,7 @@
             font-size: 0.95rem;
             color: #a3a3a3;
             max-width: 650px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.5;
             text-align: justify;
         }
@@ -325,7 +323,7 @@
             text-align: center;
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #ffffff;
             line-height: 1.2;
         }
@@ -336,18 +334,18 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* About Us - Reduced gap by 50-70%, justified text */
+        /* About Us - Minimized top gap as requested */
         .about-section {
             background: #060606;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 25px;
-            padding-bottom: 25px;
+            padding-top: 15px;
+            padding-bottom: 20px;
         }
 
         .about-card {
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(191, 149, 63, 0.25);
-            padding: 25px 20px;
+            padding: 22px 20px;
             border-radius: 14px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.8);
@@ -367,12 +365,12 @@
             margin-bottom: 0;
         }
 
-        /* Services - Reduced gap, icons centered */
+        /* Services */
         .services-section {
             background: #030303;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 25px;
-            padding-bottom: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .services-grid {
@@ -388,7 +386,7 @@
             border-radius: 12px;
             backdrop-filter: blur(10px);
             transition: transform 0.3s, border-color 0.3s;
-            text-align: center; /* Center everything inside card including icons and titles */
+            text-align: center;
         }
 
         .service-card:hover {
@@ -419,12 +417,12 @@
             text-align: justify;
         }
 
-        /* Portfolio - Reduced gap, centered title, justified text, horizontal scrollable images */
+        /* Portfolio - 1 image viewable at a time, scrollable one by one, click to zoom/enlarge modal */
         .portfolio-section {
             background: #060606;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 25px;
-            padding-bottom: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .portfolio-card {
@@ -454,15 +452,14 @@
             text-align: justify;
         }
 
-        /* Horizontal Scrollable Screenshots Container */
+        /* 1 Image at a time snap scroll container */
         .portfolio-screenshots {
             display: flex;
             gap: 15px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            padding-bottom: 10px;
+            padding: 10px 0;
             margin-top: 15px;
-            justify-content: flex-start;
             scrollbar-width: thin;
             scrollbar-color: #bf953f #111;
         }
@@ -482,35 +479,82 @@
         }
 
         .screenshot-box {
-            flex: 0 0 160px;
-            scroll-snap-align: start;
+            flex: 0 0 100%; /* Exactly 1 image viewable at a time */
+            scroll-snap-align: center;
             background: #111;
-            border: 1px solid rgba(191, 149, 63, 0.2);
-            border-radius: 10px;
-            padding: 10px;
+            border: 1px solid rgba(191, 149, 63, 0.3);
+            border-radius: 12px;
+            padding: 12px;
             text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .screenshot-box:hover {
+            border-color: #bf953f;
         }
 
         .screenshot-box img {
             width: 100%;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.5);
-            margin-bottom: 6px;
+            max-height: 320px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            margin-bottom: 8px;
+            transition: transform 0.3s;
         }
 
         .screenshot-box span {
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             color: #bf953f;
             font-weight: 600;
+            display: block;
         }
 
-        /* Contact - Reduced gap before copyright */
+        /* Fullscreen Image Modal for Clicking and Enlarging */
+        #imageModal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #imageModal img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+            border: 2px solid #bf953f;
+            box-shadow: 0 0 30px rgba(191, 149, 63, 0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fcf6ba;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: #ffffff;
+        }
+
+        /* Contact */
         .contact-section {
             background: #030303;
             border-top: 1px solid rgba(191, 149, 63, 0.1);
-            padding-top: 25px;
-            padding-bottom: 15px; /* Minimized bottom padding */
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
 
         .contact-container {
@@ -600,15 +644,14 @@
             filter: grayscale(80%) invert(90%) contrast(90%);
         }
 
-        /* Reduced gap between contact box and footer copyright text */
         footer {
             text-align: center;
-            padding: 15px 20px;
+            padding: 10px 20px;
             background: #020202;
             color: #737373;
             font-size: 0.8rem;
             border-top: none;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         @media (max-width: 768px) {
@@ -680,14 +723,14 @@
             </div>
         </header>
 
-        <!-- Hero Section (Empowering lowercase except E, moved up close to header) -->
+        <!-- Hero Section - Tight gap from header -->
         <section class="hero" id="home">
             <h1 id="hero-title" class="empower-title">empowering small medium enterprise with <span>digitalization & automation</span></h1>
             <p id="hero-desc">We transform traditional small medium enterprise operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
             <a href="#services" class="cta-btn" id="hero-btn">Explore Our Services</a>
         </section>
 
-        <!-- About Us Section (Gap reduced by 50-70%, text justified) -->
+        <!-- About Us Section - Minimized top gap -->
         <section class="section about-section" id="about">
             <h2 class="section-title" id="about-heading">About <span>Us</span></h2>
             <div class="about-card">
@@ -696,7 +739,7 @@
             </div>
         </section>
 
-        <!-- Services Section (Icons and content centered) -->
+        <!-- Services Section -->
         <section class="section services-section" id="services">
             <h2 class="section-title" id="services-heading">Our Core <span>Services</span></h2>
             <div class="services-grid">
@@ -718,34 +761,41 @@
             </div>
         </section>
 
-        <!-- Portfolio Section (Personal trainer centered, justified text, horizontal scrollable images) -->
+        <!-- Portfolio Section - 1 image viewable at a time, click to enlarge -->
         <section class="section portfolio-section" id="portfolio">
             <h2 class="section-title" id="portfolio-heading">Our <span>Projects</span></h2>
             <div class="portfolio-card">
                 <h3 id="proj-title">Personal Trainer Log System</h3>
                 <p id="proj-desc">A comprehensive mobile-friendly digital workout tracking and gym management system designed for personal trainers to effortlessly manage trainees, create master workout programs, and track real-time fitness logs.</p>
+                
                 <div class="portfolio-screenshots">
-                    <div class="screenshot-box">
+                    <div class="screenshot-box" onclick="openModal('PT-1.jfif')">
                         <img src="PT-1.jfif" alt="PT Login Screen">
-                        <span>Login & Auth</span>
+                        <span>🔍 Click to Zoom (Login & Auth)</span>
                     </div>
-                    <div class="screenshot-box">
+                    <div class="screenshot-box" onclick="openModal('PT-2.jfif')">
                         <img src="PT-2.jfif" alt="Trainer Dashboard">
-                        <span>Dashboard</span>
+                        <span>🔍 Click to Zoom (Dashboard)</span>
                     </div>
-                    <div class="screenshot-box">
+                    <div class="screenshot-box" onclick="openModal('PT-6.jfif')">
                         <img src="PT-6.jfif" alt="Add Workout Log">
-                        <span>Workout Logs</span>
+                        <span>🔍 Click to Zoom (Workout Logs)</span>
                     </div>
-                    <div class="screenshot-box">
+                    <div class="screenshot-box" onclick="openModal('PT-7.jfif')">
                         <img src="PT-7.jfif" alt="Workout History Result">
-                        <span>History & Records</span>
+                        <span>🔍 Click to Zoom (History & Records)</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Us Section (Gap before copyright reduced) -->
+        <!-- Fullscreen Modal for Enlarged Image Viewing -->
+        <div id="imageModal" onclick="closeModal()">
+            <span class="close-modal">&times;</span>
+            <img id="modalImg" src="" alt="Enlarged Project Screenshot">
+        </div>
+
+        <!-- Contact Us Section -->
         <section class="section contact-section" id="contact">
             <h2 class="section-title" id="contact-heading">Contact <span>Us</span></h2>
             <div class="contact-container">
@@ -795,6 +845,19 @@
     </div>
 
     <script>
+        // Modal functions for enlarging portfolio images
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = 'flex';
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
         const translations = {
             en: {
                 heroTitle: "empowering small medium enterprise with <span>digitalization & automation</span>",
@@ -885,7 +948,7 @@
                 portfolioHeading: "我们的 <span>项目</span>",
                 projTitle: "Personal Trainer Log System",
                 projDesc: "专为私人教练设计的全面且对移动端友好的数字锻炼追踪与健身管理系统。",
-                contactHeading: "联系 <span>我们</span>",
+                contactHeading: "Contact <span>Us</span>",
                 contactSub: "取得联系",
                 addrLabel: "Address",
                 phoneLabel: "联系电话 / WhatsApp",
