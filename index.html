@@ -588,7 +588,7 @@
             document.getElementById('hero-title').innerHTML = t.heroTitle;
             document.getElementById('hero-desc').innerText = t.heroDesc;
             document.getElementById('hero-btn').innerText = t.heroBtn;
-            document.getElementById('services-heading').innerHTML = t.servicesHeading;
+            document.getElementById('services-heading').innerHTML = t.servicesheading || t.servicesHeading;
             document.getElementById('serv-1-title').innerText = t.serv1Title;
             document.getElementById('serv-1-desc').innerText = t.serv1Desc;
             document.querySelectorAll('.service-card')[1].querySelector('h3').innerText = t.serv2Title;
