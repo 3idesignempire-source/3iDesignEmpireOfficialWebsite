@@ -288,34 +288,39 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(3,3,3,0.2) 0%, rgba(3,3,3,0.85) 100%);
+    background: linear-gradient(180deg, rgba(3,3,3,0.3) 0%, rgba(3,3,3,0.85) 100%);
 }
 
 .banner-content-text {
     position: relative;
     z-index: 2;
-    padding: 25px 30px;
+    padding: 22px 25px; /* Adjusted padding so text won't touch top border */
     text-align: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
 }
 
 .banner-content-text h3 {
-    font-size: 1.35rem;
+    font-size: 1.2rem; /* Adjusted for perfect mobile view without cutting */
     color: #fcf6ba;
     font-family: 'Cinzel', serif;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    gap: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+    line-height: 1.3;
 }
 
 .banner-content-text p {
-    font-size: 0.95rem;
+    font-size: 0.88rem; /* Optimized font size */
     color: #e0e0e0;
-    line-height: 1.4;
+    line-height: 1.35;
     margin: 0;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
 }
 
 .hero-line-1 {
@@ -599,7 +604,7 @@ header {
     color: #ffffff;
 }
 
-/* Contact - Fixed Text Clarity & Visibility */
+/* Contact */
 .contact-section {
     background: #030303;
     border-top: 1px solid rgba(191, 149, 63, 0.12);
@@ -648,7 +653,6 @@ header {
     font-weight: 600;
 }
 
-/* Clear Bright Text Color for Mobile Number & Address */
 .contact-item div p.contact-text-detail, 
 .contact-item div p.contact-text-detail a {
     font-size: 0.95rem;
@@ -729,7 +733,16 @@ footer {
     }
     .hero-digital-banner {
         max-width: 96%;
-        height: 260px;
+        height: 250px;
         margin-bottom: 18px;
+    }
+    .banner-content-text {
+        padding: 16px 18px;
+    }
+    .banner-content-text h3 {
+        font-size: 1.05rem;
+    }
+    .banner-content-text p {
+        font-size: 0.82rem;
     }
 }
