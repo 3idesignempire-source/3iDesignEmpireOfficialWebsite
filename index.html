@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- Splash Screen -->
     <div id="splash-screen">
         <div class="splash-content-wrapper">
             <svg class="crown-logo-graphic" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
@@ -23,151 +22,125 @@
                         <stop offset="100%" stop-color="#aa771c" />
                     </linearGradient>
                 </defs>
-                <path d="M10 55 L90 55 L95 25 L70 42 L50 15 L30 42 L5 25 Z" fill="url(#goldGrad)" stroke="#fcf6ba" stroke-width="2" stroke-linejoin="round"/>
-                <circle cx="10" cy="22" r="4" fill="url(#goldGrad)" />
-                <circle cx="50" cy="12" r="5" fill="url(#goldGrad)" />
-                <circle cx="90" cy="22" r="4" fill="url(#goldGrad)" />
-                <rect x="10" y="58" width="80" height="7" rx="3" fill="url(#goldGrad)" />
+                <path fill="url(#goldGrad)" d="M50 5 L65 25 L95 15 L80 50 L20 50 L5 15 L35 25 Z" />
             </svg>
-
-            <div class="logo-container">
-                <div class="logo-3d">3i DESIGN EMPIRE</div>
-            </div>
-            <div class="splash-subtitle" id="splash-subtitle-text">Empowering SMEs & Professionals with Complete Digitalization Solutions</div>
             
-            <div class="lang-selector-box">
-                <h3 id="lang-box-title">Please Select Your Preferred Language</h3>
-                <div class="lang-buttons-container">
-                    <button class="lang-btn" onclick="enterSite('en')">English</button>
-                    <button class="lang-btn" onclick="enterSite('ms')">Bahasa Melayu</button>
-                    <button class="lang-btn" onclick="enterSite('ta')">தமிழ்</button>
-                    <button class="lang-btn" onclick="enterSite('zh')">中文</button>
+            <h2 class="company-title" id="company-name">3i DESIGN EMPIRE</h2>
+            <p class="company-subtitle" id="company-tagline">Digital Transformation & Business Automation</p>
+            
+            <div class="services-preview-grid">
+                <div class="service-card-mini">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4 id="prev-serv-1-title">Web & App Dev</h4>
+                    <p id="prev-serv-1-desc">Modern custom systems</p>
+                </div>
+                <div class="service-card-mini">
+                    <i class="fas fa-robot"></i>
+                    <h4 id="prev-serv-2-title">AI Automation</h4>
+                    <p id="prev-serv-2-desc">Smart workflow solutions</p>
+                </div>
+            </div>
+
+            <div class="language-select-wrapper">
+                <label id="select-lang-label">Please Select Your Preferred Language:</label>
+                <div class="language-buttons">
+                    <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                    <button class="lang-btn" onclick="setLanguage('ms')">Melayu</button>
+                    <button class="lang-btn" onclick="setLanguage('ta')">தமிழ்</button>
+                    <button class="lang-btn" onclick="setLanguage('zh')">中文</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Main Content -->
     <div id="main-content">
-        <header>
-            <div class="nav-logo-area">
-                <svg class="nav-crown-svg" viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 55 L90 55 L95 25 L70 42 L50 15 L30 42 L5 25 Z" fill="url(#goldGrad)" stroke="#fcf6ba" stroke-width="2" stroke-linejoin="round"/>
-                    <circle cx="10" cy="22" r="4" fill="url(#goldGrad)" />
-                    <circle cx="50" cy="12" r="5" fill="url(#goldGrad)" />
-                    <circle cx="90" cy="22" r="4" fill="url(#goldGrad)" />
-                    <rect x="10" y="58" width="80" height="7" rx="3" fill="url(#goldGrad)" />
+        <nav class="navbar">
+            <div class="nav-brand">
+                <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="url(#goldGrad)" d="M50 5 L65 25 L95 15 L80 50 L20 50 L5 15 L35 25 Z" />
                 </svg>
-                <div class="nav-logo">3i DESIGN EMPIRE</div>
+                <span id="nav-title">3i Design Empire</span>
             </div>
-            <div>
-                <button class="home-btn-nav" onclick="returnToSplash()"><i class="fas fa-home"></i> Home</button>
+            <div class="nav-links">
+                <a href="#services" id="nav-serv">Services</a>
+                <a href="#about" id="nav-about">About</a>
+                <a href="#projects" id="nav-proj">Projects</a>
+                <a href="#contact" id="nav-contact">Contact</a>
+                <button class="back-lang-btn" onclick="returnToSplash()"><i class="fas fa-globe"></i> <span id="change-lang-text">Language</span></button>
+            </div>
+        </nav>
+
+        <header class="hero-digital-banner">
+            <h1 id="banner-title">Professional IT Experts & Digitalization Team</h1>
+            <p id="banner-desc">Building high-performance custom business systems, automated cloud workflows, and modern web platforms for SMEs across Malaysia.</p>
+            <div class="banner-cta-group">
+                <a href="#services" class="primary-btn" id="btn-services">Services</a>
+                <a href="#contact" class="secondary-btn" id="btn-contact">Contact Us</a>
             </div>
         </header>
 
-        <!-- Hero Section with Professional IT Team & Digitalization Banner -->
-        <section class="hero" id="home">
-            <div class="hero-digital-banner">
-                <div class="banner-overlay"></div>
-                <div class="banner-content-text">
-                    <h3><i class="fas fa-users-cog"></i> Professional IT Experts & Digitalization Team</h3>
-                    <p>Building high-performance custom business systems, automated cloud workflows, and modern web platforms for SMEs across Malaysia.</p>
-                </div>
-            </div>
-
-            <div class="hero-line-1" id="hero-line-1"><span style="text-transform:uppercase; font-size:1.15em;">E</span>mpowering <span style="text-transform:uppercase; font-size:1.15em;">s</span>mall <span style="text-transform:uppercase; font-size:1.15em;">m</span>edium <span style="text-transform:uppercase; font-size:1.15em;">e</span>nterprise with</div>
-            <div class="hero-line-2" id="hero-line-2"><span>Digitalization & Automation</span></div>
-            <p id="hero-desc">We transform traditional operations into smart, automated, and high-performance digital systems tailored for your business growth.</p>
-            
-            <div class="hero-action-buttons">
-                <a href="#services" class="action-chip-btn" id="btn-services"><i class="fas fa-cogs"></i> Services</a>
-                <a href="#about" class="action-chip-btn" id="btn-about"><i class="fas fa-info-circle"></i> About Us</a>
-                <a href="#portfolio" class="action-chip-btn" id="btn-projects"><i class="fas fa-project-diagram"></i> Our Projects</a>
-                <a href="#contact" class="action-chip-btn" id="btn-contact"><i class="fas fa-envelope"></i> Contact Us</a>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section class="section about-section" id="about">
-            <h2 class="section-title" id="about-heading">About <span>Us</span></h2>
-            <div class="about-card">
-                <p id="about-text-1">3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local small medium enterprise and businesses.</p>
-                <p id="about-text-2">We believe every local enterprise deserves top-tier digital systems, automated workflows, and high-performance custom applications to thrive in today's competitive landscape. Our commitment is to empower your business growth through cutting-edge technology delivered with precision and excellence.</p>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="section services-section" id="services">
-            <h2 class="section-title" id="services-heading">Our Core <span>Services</span></h2>
+        <section id="services">
+            <h2 class="section-title" id="serv-heading">Our <span>Services</span></h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-laptop-code"></i>
-                    <h3 id="serv-1-title">Custom Web & Mobile Applications</h3>
-                    <p id="serv-1-desc">Tailored, modern business web and mobile applications built to scale your operations efficiently.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-globe"></i>
-                    <h3 id="serv-2-title">Website Development & Maintenance</h3>
-                    <p id="serv-2-desc">Professional corporate websites built from scratch, complete with ongoing updates and technical maintenance.</p>
+                    <h3 id="serv-1-title">Custom Web & Apps</h3>
+                    <p id="serv-1-desc">Tailored responsive web applications and management systems built for small and medium enterprises.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-cogs"></i>
-                    <h3 id="serv-3-title">Business Digitalization & Automation</h3>
-                    <p id="serv-3-desc">Convert manual workflows, paper records, and repetitive tasks into sleek, automated cloud workflows.</p>
+                    <h3 id="serv-2-title">Business Automation</h3>
+                    <p id="serv-2-desc">Automate your regular business workflows, reducing manual errors and saving valuable operational time.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-tools"></i>
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3 id="serv-3-title">Cloud Integration</h3>
+                    <p id="serv-3-desc">Seamless cloud hosting, data management, and secure backup integrations for local businesses.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
                     <h3 id="serv-4-title">IT Support & Maintenance</h3>
-                    <p id="serv-4-desc">Reliable part-time application support, bug fixing, and continuous system maintenance for smooth operations.</p>
+                    <p id="serv-4-desc">Reliable part-time application maintenance, bug fixing, and technical support services in Malaysia.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section class="section portfolio-section" id="portfolio">
-            <h2 class="section-title" id="portfolio-heading">Our <span>Projects</span></h2>
-            <div class="portfolio-card">
-                <h3 id="proj-title">Personal Trainer Log System</h3>
-                <p id="proj-desc">A comprehensive mobile-friendly digital workout tracking and gym management system designed for personal trainers to effortlessly manage trainees, create master workout programs, and track real-time fitness logs.</p>
-                
-                <div class="portfolio-screenshots">
-                    <div class="screenshot-box" onclick="openModal('PT-1.jfif')">
-                        <img src="PT-1.jfif" alt="PT Login Screen">
-                        <span>🔍 Click to Zoom (Login & Auth)</span>
+        <section id="about">
+            <h2 class="section-title" id="about-heading">About <span>Us</span></h2>
+            <div class="about-content">
+                <p id="about-text-1">3i Design Empire is built by a passionate, highly experienced IT team driven by a clear mission: to bring advanced technological solutions and AI-driven innovations directly to local small medium enterprises and individuals in Malaysia.</p>
+                <p id="about-text-2">With over 17 years of hands-on industry expertise, we specialize in transforming traditional paper-based workflows into smart, high-performance digital environments.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title" id="portfolio-heading">Featured <span>Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img-box" onclick="openModal('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80')">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Gym Workout Log System">
                     </div>
-                    <div class="screenshot-box" onclick="openModal('PT-2.jfif')">
-                        <img src="PT-2.jfif" alt="Trainer Dashboard">
-                        <span>🔍 Click to Zoom (Dashboard)</span>
-                    </div>
-                    <div class="screenshot-box" onclick="openModal('PT-6.jfif')">
-                        <img src="PT-6.jfif" alt="Add Workout Log">
-                        <span>🔍 Click to Zoom (Workout Logs)</span>
-                    </div>
-                    <div class="screenshot-box" onclick="openModal('PT-7.jfif')">
-                        <img src="PT-7.jfif" alt="Workout History Result">
-                        <span>🔍 Click to Zoom (History & Records)</span>
+                    <div class="project-info">
+                        <h3 id="proj-title">Gym Workout Log System</h3>
+                        <p id="proj-desc">A digital transformation tool for local gym trainers to manage client progress logs and automate WhatsApp notifications.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Modal -->
-        <div id="imageModal" onclick="closeModal()">
+        <div id="imageModal" class="modal" onclick="closeModal()">
             <span class="close-modal">&times;</span>
-            <img id="modalImg" src="" alt="Enlarged Screenshot">
+            <img class="modal-content" id="modalImg">
         </div>
 
-        <!-- Contact Section -->
-        <section class="section contact-section" id="contact">
-            <h2 class="section-title" id="contact-heading">Contact <span>Us</span></h2>
+        <section id="contact">
+            <h2 class="section-title" id="contact-heading">Get in <span>Touch</span></h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3 id="contact-sub">Get In Touch</h3>
-                    
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4 id="addr-label">Address</h4>
+                            <h4 id="addr-label">Our Location</h4>
                             <p>Rawang, Selangor, Malaysia</p>
                         </div>
                     </div>
@@ -202,7 +175,7 @@
         </section>
 
         <footer>
-            <p id="footer-text">&copy; 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Enterprises & Professionals.</p>
+            <p id="footer-text">© 2026 3i DESIGN EMPIRE. All Rights Reserved. Serving Enterprises & Professionals.</p>
         </footer>
     </div>
 
