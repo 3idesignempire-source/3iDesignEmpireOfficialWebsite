@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Splash Screen */
+/* Splash Screen & Language Selector */
 #splash-screen {
     position: fixed;
     top: 0;
